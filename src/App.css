@@ -1,18 +1,79 @@
+.vibrate {
+  animation: vibrate 0.3s linear infinite;
+}
+
 @keyframes vibrate {
-  0%, 100% {
-    transform: translateX(0);
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  50% { transform: translateX(1px); }
+  75% { transform: translateX(-1px); }
+  100% { transform: translateX(1px); }
+}
+
+
+@keyframes animate-zoomInOut {
+  0% {
+    transform: scale(0.8);
   }
-  25% {
-    transform: translateX(-1px);
-  }
+
   50% {
-    transform: translateX(1px);
+    transform: scale(1);
   }
-  75% {
-    transform: translateX(-1px);
+
+  100% {
+    transform: scale(0.8);
   }
 }
 
-.vibrate {
-  animation: vibrate 1s infinite;
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-zoomInOut {
+  animation: animate-zoomInOut 2s ease-in-out infinite;
+}
+
+.paranetDiv:hover .zoomInOut {
+  animation: zoomInOut 1s ease-in-out infinite;
+}
+
+
+.fontstyle {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes osilate {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.osilate {
+  animation: osilate 1s ease-in-out infinite;
+}
+
+
+@media (min-width: 390px) and (max-width: 766px) {
+  .custom-style {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
