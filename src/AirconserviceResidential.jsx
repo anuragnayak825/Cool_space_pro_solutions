@@ -15,40 +15,28 @@ import icon6 from './assets/air-conditioning.png'
 
 const services = [
     {
-        title: 'Commercial Service',
-        desc: 'Eleifend lacinia prasent hendrerit quisque penatibus erat. At pulvinar integer',
-        icon: icon1,
-        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-1.jpg'
-    },
-    {
-        title: 'Residential Service',
-        desc: 'Suscipit Duis arcu iaculis classes nullam socis nibh rutrum aliquam vulputa.',
+        title: 'Aircond Service & Cleaning',
+        desc: 'Keep your air conditioners running smoothly with our cleaning and servicing packages.',
         icon: icon2,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-2.jpg'
     },
     {
-        title: 'Industrial Service',
-        desc: 'At pulvinar integer semper ridiculus lectus condimentum obor tise verodar.',
+        title: 'CENTRALIZED DUCTED / FRESH AIR',
+        desc: 'We offer basic and chemical cleaning for all centralised and ducted aircon units with 100% Satisfaction Gurantee starting at only RM338 per unit.',
         icon: icon3,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-3.jpg'
     },
     {
-        title: 'Dust Cleaning',
-        desc: 'Exercitation ullamco laboris nisi ut aliquip exe ea commodo coniseqs duis aute irure',
+        title: 'Troubleshooting and Water Leak Repair',
+        desc: 'Accurate aircon diagnosis helps identify the root issue—avoid DIY without proper training',
         icon: icon4,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-5.jpg'
     },
     {
-        title: 'Quality Testing',
-        desc: 'Suscipit Duis arcu iaculis classes nullam socis nibh rutrum aliquam vulputa',
+        title: 'CASSETTE UNIT / CEILING EXPOSED AIRCON',
+        desc: 'We provide basic and chemical cleaning for cassette and ceiling-exposed units—no dismantling needed',
         icon: icon5,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-6.jpg'
-    },
-    {
-        title: 'Heating Service',
-        desc: 'Amets consectetur adipisicing elit sed do eiusmod tempor incididunt at labore',
-        icon: icon6,
-        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-7.jpg'
     },
 ];
 
@@ -75,7 +63,7 @@ const Service_Flow = [
     },
 ]
 
-export default function AirconService() {
+export default function AirconserviceResidential() {
     return (
         <Layout>
             {/* Banner */}
@@ -127,7 +115,7 @@ export default function AirconService() {
                 </p>
 
                 {/* Services Grid */}
-                <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
                     {services?.map((item, i) => (
                         <div
                             key={i}
