@@ -5,7 +5,7 @@ import CursorBubble from './CursorBubble'; // adjust path if needed
 
 const Home = lazy(() => import("./page/Home"));
 const About = lazy(() => import("./page/About"));
-const ContactUs = lazy(() => import("./page/contact-us"));
+const ContactUs = lazy(() => import("./page/ContactUs"));
 const AirconserviceResidential = lazy(() => import('./AirconserviceResidential'));
 const AirconServiceCommercial = lazy(() => import('./AirconServiceCommercial'));
 const InteriorResidential = lazy(() => import('./InteriorResidential'));
