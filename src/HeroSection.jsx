@@ -7,8 +7,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import heroImage from './assets/hero.webp';
-import heroImage2 from './assets/Hero_img_2.webp';
-import heroImage3 from './assets/Hero_img_3.webp';
+import heroImage2 from './assets/hero_img_2.webp';
+import heroImage3 from './assets/hero_img_3.webp';
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const images = [heroImage, heroImage2, heroImage3];
