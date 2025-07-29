@@ -1,12 +1,13 @@
 import React from 'react'
+import { FaWhatsapp } from 'react-icons/fa6'
 
 export default function OfferSection() {
     return (
         <div className='w-full h-auto flex flex-col lg:flex-row justify-center px-6 md:px-10 lg:px-20 pb-10 gap-6'>
-            
+
             {/* Left Offer Box */}
             <div className='w-full lg:w-[35%] h-auto'>
-                <div className='w-full h-full bg-blue-600 text-white px-6 md:px-10 lg:px-20 py-10'>
+                <div className='w-full h-full bg-blue-600 text-white px-6 md:px-10 lg:px-18 py-10'>
                     <h1 className='text-3xl md:text-4xl font-semibold text-center'>
                         Your Dream Space Starts Here — Let’s Begin!
                     </h1>
@@ -18,6 +19,10 @@ export default function OfferSection() {
                         No upfront costs, no surprises — just reliable service and real value.
                         Your dream space is within reach, and we’re here to make it happen.
                     </p>
+
+                    <div className='w-full h-auto flex justify-center mt-2.5 items-center'>
+                        <button className='w-auto h-auto px-3 py-2.5 bg-green-600 rounded-md flex justify-center items-center animate-bounce cursor-pointer font-semibold'><FaWhatsapp  className='mr-2.5'/>  Chat on WhatsApp</button>
+                    </div>
                 </div>
             </div>
 

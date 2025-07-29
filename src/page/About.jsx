@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../Layout/Layout'
 import { FaRightLong } from 'react-icons/fa6'
 import AboutSection from '../AboutSection'
@@ -7,8 +7,16 @@ import WhyChooes from '../WhyChooes'
 import ContactFrom2 from '../ContactFrom2'
 import ServicenameAndDesign from '../ServicenameAndDesign'
 import ClientReviewSlider from '../ClientReviewSlider'
+import StatsSection from '../StatsSection'
+import MissionVisionSection from '../MissionVisionSection'
+import GradientCTABanner from '../CTADiscountSection'
+import ServiceHighlightsSection from '../ServiceHighlightsSection'
 
 export default function About() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <Layout>
             <div className="w-full h-[60vh] bg-no-repeat bg-center bg-cover relative bg-[url('https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/page-banner.jpg')]">
@@ -23,12 +31,12 @@ export default function About() {
                     </div>
                 </div>
             </div>
-
-            <AboutSection/>
-            <ServicenameAndDesign/>
-            <WhyChooes/>
-            <ClientReviewSlider/>
-            <ContactFrom2/>
+            {/* <StatsSection /> */}
+            <Aboutsection2 />
+            <MissionVisionSection/>
+            <ServiceHighlightsSection/>
+            {/* <ServicenameAndDesign /> */}
+            <GradientCTABanner/>
         </Layout>
     )
 }

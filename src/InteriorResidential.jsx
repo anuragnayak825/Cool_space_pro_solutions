@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from './Layout/Layout'
 import { FaRightLong } from 'react-icons/fa6'
 import { motion, useScroll, useTransform } from 'framer-motion'
@@ -46,6 +46,9 @@ export default function InteriorResidential() {
     const { scrollYProgress } = useScroll();
     const lineWidth = useTransform(scrollYProgress, [0, 1], ['100%', '5%']);
     const lineHeight = useTransform(scrollYProgress, [0, 1], ['100%', '.5%']);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <Layout>
@@ -53,10 +56,10 @@ export default function InteriorResidential() {
             <div className="w-full h-[60vh] bg-no-repeat bg-center bg-cover bg-fixed relative bg-[url('https://demo2.themelexus.com/antra/wp-content/uploads/2025/06/breadcrumb-df.jpg')]">
                 <div className="absolute inset-0 w-full h-full bg-[#100801a8] flex flex-col justify-center items-center space-y-4 text-center px-4">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white">
-                        Interior Service
+                        Interior Design
                     </h1>
                     <div className="flex items-center gap-3 text-white text-base sm:text-lg md:text-xl">
-                        Home <FaRightLong className="text-sm sm:text-base" /> Service
+                        Home <FaRightLong className="text-sm sm:text-base" /> Interior Design
                     </div>
                 </div>
             </div>
@@ -76,7 +79,7 @@ export default function InteriorResidential() {
                 </div>
 
                 <div className="flex flex-col lg:flex-row justify-between items-start mt-9 gap-8 relative z-10">
-                    <div className="w-full lg:w-1/4 flex md:justify-center lg:justify-start">
+                    <div className="w-full lg:w-1/4 flex md:justify-center lg:justify-start mt-4">
                         <button className="text-sm font-semibold text-black border rounded-full border-gray-300 px-5 py-2 hover:bg-black hover:text-white transition">
                             <span className="text-[#00C4CC] mr-2">•</span> OUR SERVICES
                         </button>

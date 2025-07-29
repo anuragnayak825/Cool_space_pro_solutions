@@ -1,12 +1,14 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaInstagram, FaTimes } from 'react-icons/fa';
 import { FiPhone, FiMenu } from 'react-icons/fi';
 import { IoIosArrowDown } from 'react-icons/io';
 import Logo from '../assets/logo.png';
+import { AuthContext } from '../Auth/Authprovider';
 
 export default function Header() {
+  const {setShow } = useContext(AuthContext)
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [serviceHover, setServiceHover] = useState(false);
@@ -54,13 +56,12 @@ export default function Header() {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact-us" },
   ];
 
   const serviceItems = [
     { name: "Aircon Service", path: "/aircon-service" },
     { name: "Interior Design", path: "/interior" },
-    { name: "Home Renovation", path: "/renovation" },
+    { name: "Home Renovation", path: "/home-renovation" },
   ];
 
   return (
@@ -128,28 +129,49 @@ export default function Header() {
               )}
             </AnimatePresence>
           </div>
+          <NavLink
+
+            to={'/contact-us'}
+            className={({ isActive }) =>
+              isActive
+                ? 'text-[#00C4CC] border-b-2 border-[#00C4CC] pb-1'
+                : 'hover:text-[#00C4CC] transition'
+            }
+          >
+            Contact
+          </NavLink>
 
           {/* Quote Button - Visible on all except mobile */}
-          <a
-            href="tel:+60123456789"
-            className="hidden sm:inline-block bg-[#1574C0] text-white px-4 py-2 rounded text-xs sm:text-sm font-medium hover:bg-[#00C4CC] transition transform hover:scale-105 ml-2"
-          >
-            Get Your Free Quote
-          </a>
+
         </nav>
 
+        <button
+          onClick={() => {
+            setShow(true)
+
+          }}
+          className="hidden sm:inline-block bg-[#1574C0] text-white px-4 py-2 rounded text-xs sm:text-sm font-medium hover:bg-[#00C4CC] transition transform hover:scale-105 ml-2"
+        >
+          Make a Reservation
+        </button>
         {/* Contact & Social Icons */}
-        <div className="hidden lg:flex items-center gap-3 border-l pl-4 border-gray-300">
-          <a href="tel:+60123456789" className="flex items-center text-sm font-medium">
-            <FiPhone className="mr-2 text-base" />
-            <span className="hidden md:inline text-lg">+60 12-345 6789</span>
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-[#1574C0] hover:text-[#00C4CC] transition text-lg">
-            <FaFacebookF />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#1574C0] hover:text-[#00C4CC] transition text-lg">
-            <FaInstagram />
-          </a>
+        <div className=' flex space-x-7'>
+          <div className="hidden lg:flex items-center gap-3 border-l pl-4 border-gray-300">
+            <a href="tel:+60123456789" className="flex items-center text-sm font-medium">
+              <FiPhone className="mr-2 text-base" />
+              <span className="hidden md:inline text-lg">+60 12-345 6789</span>
+            </a>
+
+          </div>
+          <div className="hidden lg:flex items-center gap-3 border-l pl-4 border-gray-300">
+            <p className='font-normal text-gray-500 text-sm underline'>Follow us</p>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-[#1574C0] hover:text-[#00C4CC] transition text-lg">
+              <FaFacebookF />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#1574C0] hover:text-[#00C4CC] transition text-lg">
+              <FaInstagram />
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Toggle */}

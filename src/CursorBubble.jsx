@@ -34,8 +34,8 @@ export default function CursorBubble() {
             className="w-3 h-3 rounded-full bg-blue-400 shadow-2xl backdrop-blur-md"
             initial={{ opacity: 0, scale: 0.6 }}
             animate={{
-              x: position.x - 32,
-              y: position.y - 32,
+              x: position.x - 2,
+              y: position.y - 5,
               opacity: 1,
               scale: 1,
             }}

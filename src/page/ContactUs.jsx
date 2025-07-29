@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../Layout/Layout';
 import { FaLocationDot, FaRightLong, FaPhone } from 'react-icons/fa6';
 import { MdOutlineMailOutline } from 'react-icons/md';
 import QuotationForm from '../QuotationForm';
 
 export default function ContactUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Layout>
       {/* Hero Section */}
       <div className="w-full h-[60vh] bg-[url('https://homefort.like-themes.com/wp-content/uploads/2021/10/ineer_HEADER_01.jpg')] bg-center bg-cover bg-fixed relative">
         <div className="absolute inset-0 bg-[#000000b0] flex flex-col justify-center items-center text-white text-center space-y-4 px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Contact Page</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold">Contact us</h1>
           <div className="flex items-center gap-3 text-lg sm:text-xl">
             Home <FaRightLong className="text-sm sm:text-base" /> Contact
           </div>

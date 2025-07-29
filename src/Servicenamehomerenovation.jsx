@@ -1,32 +1,28 @@
-import React from 'react';
-
-import airconimg from './assets/g-a-1.webp'
-import airconimg1 from './assets/g-a-2.webp'
-
-import airconimg3 from './assets/g-a-4.webp'
-
+import React from 'react'
 
 const images = [
     {
-        src: "https://img.freepik.com/free-photo/hvac-engineer-dusting-blower-fan_482257-90845.jpg?t=st=1753599051~exp=1753602651~hmac=e66eba4367dcc06292e42f9739ffdc50e8400bd7d533c33ea665c7f1d8560c78&w=1060",
-        title: "AC Cleaning",
-    },
-    {
-        src: airconimg1
-    },
-    {
-        src: airconimg3
-    },
-    {
-        src: airconimg
-    },
-    {
-        src: 'https://img.freepik.com/free-vector/isometric-air-conditioning-concept-with-worker-men-installing-cooking-system-vector-illustration_1284-80987.jpg?t=st=1753784653~exp=1753788253~hmac=580b058cbbfcd77d863815a78abbb82bb1f96eda74c81013ab5a8514dd478785&w=996'
+        src: 'https://img.freepik.com/premium-photo/new-home-installing-material-repairs-apartment_73110-9860.jpg?uid=P136526711&ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80'
     },
 
-];
+    {
+        src: 'https://img.freepik.com/premium-photo/contractor-using-circular-saw-cutting-crown-moulding-renovation_73110-1675.jpg?uid=P136526711&ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80'
+    },
+    {
+        src: 'https://img.freepik.com/premium-photo/finished-sheetrock-new-home-construction_73110-2218.jpg?uid=P136526711&ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80'
+    },
+    // {
+    //     src: 'https://img.freepik.com/premium-photo/painting-wall-red-room-before-after-restoration-refurbishment_157125-7187.jpg?w=996'
+    // }
+    , {
+        src: 'https://img.freepik.com/premium-photo/installation-worker-installs-kitchen-cabinet_73110-8387.jpg?w=996'
+    }
+    , {
+        src: 'https://img.freepik.com/free-photo/manual-worker-grinding-metal-steel-objects-workshop-with-tools_1163-3130.jpg?t=st=1753788920~exp=1753792520~hmac=2179c38236608375b88ed62533cfccb267261a3987995f612333782b2ee176da&w=996'
+    }
+]
 
-export default function ServicenameAndDesign() {
+export default function Servicenamehomerenovation() {
     return (
         <div className="w-full px-5 md:px-20 py-5 relative overflow-hidden">
             <img src="https://wp2.yogsthemes.com/thewp/acrepair/wp-content/uploads/2022/05/pattern-1.png"
@@ -55,5 +51,5 @@ export default function ServicenameAndDesign() {
                 ))}
             </div>
         </div>
-    );
+    )
 }

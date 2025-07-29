@@ -1,32 +1,34 @@
-import React from 'react';
-
-import airconimg from './assets/g-a-1.webp'
-import airconimg1 from './assets/g-a-2.webp'
-
-import airconimg3 from './assets/g-a-4.webp'
-
+import React from 'react'
+import interior1 from './assets/g-i-1.webp'
+import interior2 from './assets/g-i-2.webp'
+import interior3 from './assets/g-i-3.webp'
+import interior4 from './assets/g-i-4.webp'
+import interior5 from './assets/g-i-5.webp'
+import interior6 from './assets/g-i-6.webp'
 
 const images = [
     {
-        src: "https://img.freepik.com/free-photo/hvac-engineer-dusting-blower-fan_482257-90845.jpg?t=st=1753599051~exp=1753602651~hmac=e66eba4367dcc06292e42f9739ffdc50e8400bd7d533c33ea665c7f1d8560c78&w=1060",
-        title: "AC Cleaning",
+        src: interior1
     },
     {
-        src: airconimg1
+        src: 'https://img.freepik.com/free-photo/view-futuristic-lighting-lamp-design_23-2151037471.jpg?uid=P136526711&ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80'
     },
     {
-        src: airconimg3
+        src: 'https://img.freepik.com/free-photo/view-futuristic-lighting-lamp-design_23-2151037504.jpg?t=st=1753787806~exp=1753791406~hmac=4e11e0f5c9dd341a9586c7339829cdec0f1771f379974c414bb86cf054d8b91a&w=996'
     },
     {
-        src: airconimg
-    },
-    {
-        src: 'https://img.freepik.com/free-vector/isometric-air-conditioning-concept-with-worker-men-installing-cooking-system-vector-illustration_1284-80987.jpg?t=st=1753784653~exp=1753788253~hmac=580b058cbbfcd77d863815a78abbb82bb1f96eda74c81013ab5a8514dd478785&w=996'
+        src: 'https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695761.jpg?t=st=1753787674~exp=1753791274~hmac=10b5e0277e484f49d9d18c6487a7a7e5424dd2988edb9c6958a16b5d18205002&w=996'
     },
 
-];
+    {
+        src: 'https://img.freepik.com/premium-psd/interior-living-room-wall-background-mockup_42637-1119.jpg?w=996'
+    },
+    {
+        src: 'https://img.freepik.com/premium-photo/modern-classic-black-interior-with-black-sofa-wall-mouldings-ceiling-backlit-wood-floor-door-curtains_158268-279.jpg?w=996'
+    },
+]
 
-export default function ServicenameAndDesign() {
+export default function ServicenameInteriordesign() {
     return (
         <div className="w-full px-5 md:px-20 py-5 relative overflow-hidden">
             <img src="https://wp2.yogsthemes.com/thewp/acrepair/wp-content/uploads/2022/05/pattern-1.png"
@@ -55,5 +57,5 @@ export default function ServicenameAndDesign() {
                 ))}
             </div>
         </div>
-    );
+    )
 }
