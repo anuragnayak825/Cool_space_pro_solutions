@@ -11,6 +11,7 @@ import {
 // import baner from './assets/service_baner.webp'
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import GradientCTABanner from './CTADiscountSection';
+import { NavLink } from 'react-router-dom';
 
 
 const baner = 'https://img.freepik.com/free-photo/full-shot-people-carrying-placard-together_23-2149328067.jpg?ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80'
@@ -69,8 +70,8 @@ export default function HomeRenovation() {
   return (
     <Layout>
       {/* Page Banner */}
-      <div className="w-full h-[60vh] bg-no-repeat bg-center bg-cover relative bg-[url('https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/page-banner.jpg')]">
-        <div className="absolute inset-0 w-full h-full bg-[#152042e6] flex flex-col justify-center items-center space-y-4 text-center px-4">
+      <div className="w-full h-[60vh] bg-no-repeat bg-center bg-cover relative bg-[url('https://img.freepik.com/free-photo/young-man-making-plans-his-new-flat_329181-19464.jpg?t=st=1753861164~exp=1753864764~hmac=602ddda2cbef059e113dd434fb20c4642760d0c00adb936af98492e410900f09&w=2000')]">
+        <div className="absolute inset-0 w-full h-full bg-[#152042d7] flex flex-col justify-center items-center space-y-4 text-center px-4">
           <h1 className="text-4xl md:text-5xl font-semibold text-white">
             Home Renovation
           </h1>
@@ -96,16 +97,16 @@ export default function HomeRenovation() {
                 {/* 3D Overlay Line-by-Line */}
                 <div className="absolute inset-0 z-10">
                   <div className="flex flex-row h-full w-full">
-                    <div className="w-1/4 h-full bg-black/80 scale-x-0 group-hover:scale-x-100 origin-right transition-transform duration-500 ease-in-out delay-0" />
-                    <div className="w-1/4 h-full bg-black/80 scale-x-0 group-hover:scale-x-100 origin-right transition-transform duration-500 ease-in-out delay-150" />
-                    <div className="w-1/4 h-full bg-black/80 scale-x-0 group-hover:scale-x-100 origin-right transition-transform duration-500 ease-in-out delay-300" />
-                    <div className="w-1/4 h-full bg-black/80 scale-x-0 group-hover:scale-x-100 origin-right transition-transform duration-500 ease-in-out delay-500" />
+                    <div className="w-1/4 h-full bg-black/80 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-in-out delay-0" />
+                    <div className="w-1/4 h-full bg-black/80 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-in-out delay-150" />
+                    <div className="w-1/4 h-full bg-black/80 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-in-out delay-300" />
+                    <div className="w-1/4 h-full bg-black/80 scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-in-out delay-500" />
                   </div>
                 </div>
               </div>
 
               {/* Card Box */}
-              <div className="mt-[-60px] w-[90%] bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl p-6 z-10 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[#00C4CC]/40">
+              <div className="mt-[-60px] w-[90%] bg-white/30 backdrop-blur-md border border-white/20 rounded-2xl shadow-md p-6 z-10 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[#00C4CC]/40 h-[340px] flex flex-col justify-between">
                 {/* Icon */}
                 <div className="w-16 h-16 flex items-center justify-center rounded-full bg-white shadow-md mx-auto mb-5 text-[#00C4CC] text-3xl">
                   {service.icon}
@@ -123,9 +124,9 @@ export default function HomeRenovation() {
 
                 {/* Learn More */}
                 <div className="flex justify-center">
-                  <button className="text-[#f7c873] font-semibold text-sm hover:underline flex items-center gap-1">
+                  <NavLink to={'/contact-us'} className="text-[#f7c873] font-semibold text-sm hover:underline flex items-center gap-1">
                     LEARN MORE <span className="ml-1">&#8594;</span>
-                  </button>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -236,7 +237,7 @@ export default function HomeRenovation() {
         </div>
       </section>
 
-      <GradientCTABanner/>
+      <GradientCTABanner />
     </Layout>
   );
 }

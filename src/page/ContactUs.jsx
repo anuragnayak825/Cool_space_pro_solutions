@@ -57,7 +57,7 @@ export default function ContactUs() {
       </div>
 
       {/* Map & Form Section */}
-      <div className="w-full flex flex-col-reverse md:flex-row gap-6 px-4 sm:px-6 md:px-10 pb-10">
+      <div className="w-full flex flex-col-reverse items-center md:flex-row gap-6 px-4 sm:px-6 md:px-10 pb-10">
         {/* Map */}
         <div className="w-full md:w-[60%] h-[300px] md:h-[500px] rounded-md overflow-hidden shadow-xl">
           <iframe

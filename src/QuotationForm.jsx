@@ -64,21 +64,18 @@ export default function QuotationForm() {
 
       {/* Address */}
       <div className="relative w-full">
-        <input
+        <select
           type="text"
           id="address"
           required
-          className="peer h-12 w-full border-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-md px-4"
+          className="peer h-12 w-full border-2 border-gray-300 text-gray-400 focus:text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-md px-4"
           placeholder="Your Address"
-        />
-        <label
-          htmlFor="address"
-          className="absolute left-4 -top-2 bg-white px-1 text-gray-600 text-sm transition-all
-          peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
-          peer-focus:-top-2 peer-focus:text-sm peer-focus:text-blue-600"
         >
-          Address
-        </label>
+          <option value="">Select service</option>
+          <option value="">Aircon Service</option>
+          <option value="">Interior Design</option>
+          <option value="">Home Renovation</option>
+        </select>
       </div>
 
       {/* Message */}

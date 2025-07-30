@@ -3,6 +3,7 @@ import { FaArrowRightLong, FaPhone } from 'react-icons/fa6';
 import { GrServices } from "react-icons/gr";
 import { HiMiniArrowTurnLeftDown, HiMiniArrowTurnRightDown } from "react-icons/hi2";
 import { motion } from "framer-motion";
+import { NavLink } from 'react-router-dom';
 export default function Aboutsection2() {
     return (
         <div className='w-full min-h-[100vh] flex flex-col lg:flex-row justify-center items-center p-5 sm:p-10 space-y-10 lg:space-y-0 lg:space-x-8'>
@@ -62,7 +63,7 @@ export default function Aboutsection2() {
 
 
                     <div className='w-full h-auto flex  items-center gap-5 '>
-                        <button className='px-3 py-2 text-[#00C4CC] font-semibold flex justify-center items-center border hover:text-white hover:bg-[#00C4CC] cursor-pointer transition-colors ease-in-out rounded-md'>Book Now <FaArrowRightLong className='ml-1.5' /></button>
+                        <NavLink to={'/contact-us'} className='px-3 py-2 text-[#00C4CC] font-semibold flex justify-center items-center border hover:text-white hover:bg-[#00C4CC] cursor-pointer transition-colors ease-in-out rounded-md'>Book Now <FaArrowRightLong className='ml-1.5' /></NavLink>
                         <button className='px-3 py-2 hover:text-[#00C4CC] hover:bg-white font-semibold flex justify-center items-center border text-white bg-[#00C4CC] cursor-pointer transition-colors ease-in-out rounded-md'><FaPhone className='mr-1.5' /> Get in Touch</button>
                     </div>
 

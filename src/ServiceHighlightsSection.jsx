@@ -8,7 +8,7 @@ export default function ServiceHighlightsSection() {
 
                 {/* AIRCON SERVICE */}
                 <div className=" p-4 md:px-10 md:py-5 ">
-                    <div className="flex items-center text-[#00C4CC] mb-4 ">
+                    <div className="flex items-center bg-[#1574C0] text-white py-1.5 px-1.5 rounded mb-4 ">
                         <FaSnowflake size={28} className="mr-3" />
                         <h2 className=" text-lg md:text-3xl font-bold">Why Regular Aircon Maintenance Matters</h2>
                     </div>
@@ -25,7 +25,7 @@ export default function ServiceHighlightsSection() {
 
                 {/* INTERIOR DESIGN */}
                 <div className="p-6 md:px-10 md:py-5 ">
-                    <div className="flex items-center text-[#00C4CC] mb-4">
+                    <div className="flex items-center bg-[#1574C0] text-white py-1.5 px-1.5 rounded  mb-4">
                         <FaCouch size={28} className="mr-3" />
                         <h2 className="text-lg md:text-3xl font-bold">Transform Your Space with Interior Design</h2>
                     </div>
@@ -42,7 +42,7 @@ export default function ServiceHighlightsSection() {
 
                 {/* HOME RENOVATION */}
                 <div className=" p-6 md:px-10 md:py-5 ">
-                    <div className="flex items-center text-[#00C4CC] mb-4">
+                    <div className="flex items-center bg-[#1574C0] text-white py-1.5 px-1.5 rounded  mb-4">
                         <FaHammer size={28} className="mr-3" />
                         <h2 className="text-lg md:text-3xl font-bold">Complete Home Renovation Solutions</h2>
                     </div>

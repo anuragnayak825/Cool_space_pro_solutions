@@ -12,6 +12,7 @@ import icon3 from './assets/engineer.png'
 import icon4 from './assets/vacuum-cleaner.png'
 import icon5 from './assets/air-conditioner.png'
 import icon6 from './assets/air-conditioning.png'
+import { useNavigate } from 'react-router-dom'
 
 const services = [
     {
@@ -76,6 +77,7 @@ const Service_Flow = [
 ]
 
 export default function AirconserviceResidential() {
+    const nav = useNavigate()
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -141,7 +143,7 @@ export default function AirconserviceResidential() {
 
                                     {/* Book Now Button */}
                                     <div className="mt-6">
-                                        <button className="bg-[#1574C0] text-white font-medium italic px-5 py-2.5 rounded-2xl flex items-center hover:bg-[#105b96] transition duration-300">
+                                        <button onClick={() => nav('/contact-us')} className="bg-[#1574C0] text-white font-medium italic px-5 py-2.5 rounded-2xl flex items-center hover:bg-[#105b96] transition duration-300">
                                             Book Now <FaRightLong className="ml-2" />
                                         </button>
                                     </div>
