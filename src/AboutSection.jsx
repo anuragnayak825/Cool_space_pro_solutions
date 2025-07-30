@@ -3,9 +3,11 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 import { GrServices } from "react-icons/gr";
 import { HiMiniArrowTurnLeftDown, HiMiniArrowTurnRightDown } from "react-icons/hi2";
 import { motion } from "framer-motion";
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 export default function AboutSection() {
+    const nav = useNavigate()
     return (
         <div className='w-full min-h-[100vh] flex flex-col lg:flex-row justify-center items-center p-5 sm:p-10 space-y-10 lg:space-y-0 lg:space-x-8'>
 
@@ -69,10 +71,11 @@ export default function AboutSection() {
                     <div className='group hidden w-auto lg:flex justify-start items-center  relative  overflow-hidden'>
                         <motion.div
                             whileHover={{ x: 100 }}
+                            onClick={() => nav('/about')}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                             className="flex items-center w-auto  space-x-2 text-[#00C4CC] py-2.5 px-3.5  font-semibold -translate-x-25 rounded-md cursor-pointer"
                         >
-                            <span className="transition-all duration-300  group-hover:opacity-100">Learn More</span>
+                            <NavLink className="transition-all duration-300  group-hover:opacity-100">Learn More</NavLink>
                             <FaArrowRightLong className="text-lg" />
                         </motion.div>
                     </div>

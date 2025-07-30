@@ -6,8 +6,7 @@ const faqData = [
     { question: "Second Question", answer: "This is the answer to the second question." },
     { question: "Third Question", answer: "This is the answer to the third question." },
     { question: "Fourth Question", answer: "This is the answer to the fourth question." },
-    { question: "Fifth Question", answer: "This is the answer to the fifth question." },
-    { question: "Sixth Question", answer: "This is the answer to the sixth question." },
+    { question: "Fifth Question", answer: "This is the answer to the fifth question." }
 ];
 
 export default function FAQSection() {
@@ -19,9 +18,8 @@ export default function FAQSection() {
 
     return (
         <div className="w-full px-5 lg:px-20 py-16 bg-white">
-            <h2 className="text-3xl italic tracking-wide font-bold mb-8 text-gray-800 text-center">Frequently Asked Questions</h2>
-
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center ">
+            <h2 className="text-3xl italic tracking-wide font-bold mb-8 text-gray-800 text-left">Frequently Asked Questions</h2>
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8  ">
                 {/* FAQ List */}
                 <div className="md:col-span-2">
                     <div className="space-y-5">

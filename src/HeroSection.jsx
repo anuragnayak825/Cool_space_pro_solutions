@@ -10,6 +10,7 @@ import heroImage from './assets/hero.webp';
 import heroImage2 from './assets/hero_img_2.webp';
 import heroImage3 from './assets/hero_img_3.webp';
 import { FaArrowRightLong } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
 const images = [heroImage, heroImage2, heroImage3];
 
@@ -45,27 +46,28 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-12 xl:px-20 py-10 gap-8 min-h-screen">
         {/* Animated Left Text */}
         <motion.div
-          className="text-white text-center lg:text-left max-w-3xl space-y-6"
+          className="text-white text-center lg:text-left max-w-3xl space-y-7"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-extrabold leading-tight drop-shadow-lg">
             Redefining Homes with Comfort, Style, and Smart Cooling
           </h1>
           <p className="mt-4 text-base sm:text-lg md:text-xl font-medium drop-shadow-md">
             We provide complete end-to-end solutions for modern living — from reliable air conditioning services to elegant interior design and flawless home renovations.
           </p>
           <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-            {["Aircon Service", "Interior Design", "Home Renovation"].map((item, i) => (
-              <span key={i} className="bg-[#1574C0] px-4 py-2 rounded-full font-semibold italic tracking-wider">
-                {item}
-              </span>
+            {[{ N: "Aircon Service", P: '/aircon-service' }, { N: "Interior Design", P: "/interior" }, { N: "Home Renovation", P: '/home-renovation' }].map((item, i) => (
+              <NavLink to={item?.P} key={i}
+                className="bg-[#1574C0] px-4 py-2 rounded-full font-semibold italic tracking-wider">
+                {item?.N}
+              </NavLink>
             ))}
           </div>
           <button className="mt-6 px-6 py-3 text-white border border-white rounded hover:bg-[#004A7F] transition flex justify-center items-center">
-            Explore Our Services <FaArrowRightLong className="text-xl ml-2.5"/>
+            Explore Our Services <FaArrowRightLong className="text-xl ml-2.5" />
           </button>
         </motion.div>
 
@@ -83,7 +85,6 @@ export default function HeroSection() {
             { id: "name", type: "text", label: "Your Name" },
             { id: "email", type: "email", label: "Email Address" },
             { id: "phone", type: "tel", label: "Phone Number" },
-            { id: "address", type: "text", label: "Address" },
           ].map(({ id, type, label }) => (
             <div className="relative w-full" key={id}>
               <input
@@ -103,8 +104,18 @@ export default function HeroSection() {
               </label>
             </div>
           ))}
-
           {/* Message */}
+          <div className="relative w-full">
+            <select
+              placeholder="Your Message"
+              className="peer h-12 w-full border-2 text-gray-400 focus:text-gray-950 border-gray-300 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-md px-4 shadow-sm"
+            >
+              <option value="">Select service</option>
+              <option value="Aicon Service">Aircon service</option>
+              <option value="Interior design">Interior design</option>
+              <option value="Home Renovation">Home Renovation</option>
+            </select>
+          </div>
           <div className="relative w-full">
             <textarea
               id="message"

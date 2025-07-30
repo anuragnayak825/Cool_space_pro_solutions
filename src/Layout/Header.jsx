@@ -8,7 +8,7 @@ import Logo from '../assets/logo.png';
 import { AuthContext } from '../Auth/Authprovider';
 
 export default function Header() {
-  const {setShow } = useContext(AuthContext)
+  const { setShow } = useContext(AuthContext)
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [serviceHover, setServiceHover] = useState(false);
@@ -142,18 +142,16 @@ export default function Header() {
           </NavLink>
 
           {/* Quote Button - Visible on all except mobile */}
+          <button
+            onClick={() => {
+              setShow(true)
 
+            }}
+            className="hidden cursor-pointer sm:inline-block bg-[#1574C0] text-white px-4 py-2 rounded text-xs sm:text-sm font-medium hover:bg-[#00C4CC] transition transform hover:scale-105 ml-2"
+          >
+            Book a Appointment 
+          </button>
         </nav>
-
-        <button
-          onClick={() => {
-            setShow(true)
-
-          }}
-          className="hidden sm:inline-block bg-[#1574C0] text-white px-4 py-2 rounded text-xs sm:text-sm font-medium hover:bg-[#00C4CC] transition transform hover:scale-105 ml-2"
-        >
-          Make a Reservation
-        </button>
         {/* Contact & Social Icons */}
         <div className=' flex space-x-7'>
           <div className="hidden lg:flex items-center gap-3 border-l pl-4 border-gray-300">
@@ -164,7 +162,7 @@ export default function Header() {
 
           </div>
           <div className="hidden lg:flex items-center gap-3 border-l pl-4 border-gray-300">
-            <p className='font-normal text-gray-500 text-sm underline'>Follow us</p>
+            <p className='font-normal text-gray-500 text-sm underline cursor-pointer'>Follow us</p>
             <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-[#1574C0] hover:text-[#00C4CC] transition text-lg">
               <FaFacebookF />
             </a>

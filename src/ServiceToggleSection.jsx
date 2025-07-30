@@ -29,7 +29,7 @@ export default function ServiceToggleSection() {
             title: 'Home Renovation',
             description: 'Expert renovation services to enhance comfort, functionality, and value of your property.',
             image: serviceImages[2],
-            path: '/renovation'
+            path: '/home-renovation'
         },
     ];
 
@@ -40,7 +40,7 @@ export default function ServiceToggleSection() {
                 <span className='font-bold text-xl sm:text-lg md:text-xl tracking-wide  bg-white px-4 italic'>
                     Our Specialized Services
                 </span>
-                <hr  className=' border-[2px] max-w-40 w-full mt-2 border-[#00C4CC]'/>
+                <hr className=' border-[2px] max-w-40 w-full mt-2 border-[#00C4CC]' />
             </div>
             {/* Service Cards */}
             <div className='max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10'>
@@ -62,7 +62,7 @@ export default function ServiceToggleSection() {
                                 {service.description}
                             </p>
                             <div className='flex flex-wrap gap-3 mt-auto'>
-                                <button className='bg-[#00C4CC] hover:bg-[#00aab1] text-white px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-md'>
+                                <button onClick={()=> window.location.href = 'tel:+918287039634'} className='bg-[#00C4CC] hover:bg-[#00aab1] text-white px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-md'>
                                     Talk to Us <FaArrowRight className='text-xs' />
                                 </button>
                                 <NavLink
