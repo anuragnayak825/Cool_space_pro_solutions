@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa6';
+import { NavLink } from 'react-router-dom';
 
 export default function GradientCTABanner() {
     return (
@@ -21,18 +22,18 @@ export default function GradientCTABanner() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-4">
-                    <a
-                        href="/quote-form"
-                        className="inline-flex items-center justify-center gap-2 bg-blue-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-800 transition shadow"
+                    <button
+                       onClick={() => window.open('tel:+919999999999')}
+                        className="inline-flex items-center justify-center gap-2 bg-blue-700 cursor-pointer text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-800 transition shadow"
                     >
                         → Speak to a Specialist
-                    </a>
-                    <a
-                        href="/quote-form"
-                        className="inline-flex items-center justify-center gap-2 bg-green-700 text-white font-semibold px-6 py-3 rounded-md hover:bg-green-800 transition"
+                    </button>
+                    <button
+                        onClick={() => window.open('https://wa.me/919999999999', '_blank')}
+                        className="inline-flex items-center justify-center gap-2 bg-green-700 cursor-pointer text-white font-semibold px-6 py-3 rounded-md hover:bg-green-800 transition"
                     >
                         <FaWhatsapp className='text-xl' /> Let’s Talk on WhatsApp
-                    </a>
+                    </button>
                 </div>
             </div>
         </section>

@@ -34,7 +34,7 @@ export default function ServiceToggleSection() {
     ];
 
     return (
-        <div className='w-full min-h-screen py-10 px-4 sm:px-6 md:px-10 bg-gradient-to-b from-white via-sky-50 to-white'>
+        <div id='servic' className='w-full min-h-screen py-10 px-4 sm:px-6 md:px-10 bg-gradient-to-b from-white via-sky-50 to-white'>
             {/* Section Title */}
             <div className=' w-auto mx-auto flex flex-col justify-center items-center  px-4 py-3 mb-5'>
                 <span className='font-bold text-xl sm:text-lg md:text-xl tracking-wide  bg-white px-4 italic'>

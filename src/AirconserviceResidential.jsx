@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Layout from './Layout/Layout'
 import { FaRightLong } from 'react-icons/fa6'
 import baner from './assets/service_baner.webp'
 import Fow_baner from './assets/Fow_img.webp'
-import img from './assets/air.png'
-import img2 from './assets/ac.png'
-import img3 from './assets/repair.png'
+import img from './assets/airconbaner.webp'
+
 import icon1 from './assets/technical-support.png'
 import icon2 from './assets/deal.png'
 import icon3 from './assets/engineer.png'
@@ -13,45 +12,53 @@ import icon4 from './assets/vacuum-cleaner.png'
 import icon5 from './assets/air-conditioner.png'
 import icon6 from './assets/air-conditioning.png'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from './Auth/Authprovider'
 
 const services = [
     {
         title: 'Aircond Service & Cleaning',
-        desc: 'Keep your air conditioners running smoothly with our cleaning and servicing packages.',
+        desc: 'Keep your air conditioners running smoothly with our expert cleaning and servicing packages. Regular maintenance extends lifespan and boosts efficiency.',
         icon: icon2,
-        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-2.jpg'
+        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-2.jpg',
+        path: '/aircon/cleaning'
     },
     {
-        title: 'CENTRALIZED DUCTED / FRESH AIR',
-        desc: 'We offer basic and chemical cleaning for all centralised and ducted aircon units with 100% Satisfaction Gurantee starting at only RM338 per unit.',
-        icon: icon3,
-        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-3.jpg'
-    },
-    {
-        title: 'Troubleshooting and Water Leak Repair',
-        desc: 'Accurate aircon diagnosis helps identify the root issue—avoid DIY without proper training',
-        icon: icon4,
-        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-5.jpg'
-    },
-    {
-        title: 'CASSETTE UNIT / CEILING EXPOSED AIRCON',
-        desc: 'We provide basic and chemical cleaning for cassette and ceiling-exposed units—no dismantling needed',
+        title: 'Wall-Mounted Service',
+        desc: 'Efficient cooling and reliable maintenance for wall-mounted AC units. Ideal for residential and small office spaces that require quiet and steady performance.',
         icon: icon5,
-        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-6.jpg'
+        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-6.jpg',
+        path: '/aircon/wall-mounted'
     },
     {
-        title: 'Residential Installation & Upgrade',
-        desc: 'Install or upgrade your home cooling system with energy-efficient aircon units.',
+        title: 'Cassette Service',
+        desc: 'Professional cassette AC services for top-notch performance. Designed for open spaces like offices or shops, ensuring even air distribution and maximum comfort.',
+        icon: icon5,
+        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-3.jpg',
+        path: '/aircon/cassette-service'
+    },
+    {
+        title: 'Duct Cleaning',
+        desc: 'Thorough duct cleaning to enhance indoor air quality. Eliminate dust, allergens, and mold from your ventilation system for a healthier living environment.',
+        icon: icon4,
+        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-4.jpg',
+        path: '/aircon/duct-cleaning'
+    },
+    {
+        title: 'Water Leaking Service',
+        desc: 'Quick and effective solutions for AC water leakage problems. Prevent further damage and ensure optimal unit performance.',
+        icon: icon3,
+        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-5.jpg',
+        path: '/aircon/water-leaking-service'
+    },
+    {
+        title: 'Aircon Installation',
+        desc: 'Professional AC installation services for homes and offices. Ensuring correct setup for long-term efficiency and performance.',
         icon: icon1,
-        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-1.jpg'
-    },
-    {
-        title: 'Commercial HVAC Solutions',
-        desc: 'Tailored air conditioning solutions for offices, buildings, and large commercial spaces.',
-        icon: icon6,
-        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-4.jpg'
+        img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-1.jpg',
+        path: '/aircon/air-installation'
     },
 ];
+
 
 const Service_Flow = [
     {
@@ -77,6 +84,7 @@ const Service_Flow = [
 ]
 
 export default function AirconserviceResidential() {
+    const { show, setShow } = useContext(AuthContext)
     const nav = useNavigate()
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -85,15 +93,13 @@ export default function AirconserviceResidential() {
     return (
         <Layout>
             {/* Banner */}
-            <div className="w-full h-[60vh] bg-no-repeat bg-center bg-cover relative bg-[url('https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/page-banner.jpg')]">
-                <div className="absolute inset-0 w-full h-full bg-[#152042e6] flex flex-col justify-center items-center space-y-4 text-center px-4">
+            <div className="w-full h-[60vh] bg-no-repeat bg-center bg-cover relative" style={{ backgroundImage: `url(${img})` }} >
+                <div className="absolute inset-0 w-full h-full bg-[#152042c5] flex flex-col justify-center items-center space-y-4 text-center px-4">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white">Aircon Service</h1>
                     <div className="flex items-center gap-3 text-white text-base sm:text-lg md:text-xl">
                         Home <FaRightLong className="text-sm sm:text-base" /> Aircon
                     </div>
-                    <img src={img2} alt="" className="w-12 sm:w-16 md:w-20 h-auto absolute top-1/2 right-4 sm:right-10 md:right-20 opacity-40 animate-zoomInOut" />
-                    <img src={img3} alt="" className="w-12 sm:w-16 md:w-20 h-auto absolute top-1/2 left-6 sm:left-16 md:left-40 opacity-40 invert animate-zoomInOut" />
-                    <img src={img} alt="" className="w-12 sm:w-16 md:w-20 h-auto absolute top-10 left-1/2 transform -translate-x-1/2 opacity-40 invert animate-zoomInOut" />
+
                 </div>
             </div>
 
@@ -143,8 +149,11 @@ export default function AirconserviceResidential() {
 
                                     {/* Book Now Button */}
                                     <div className="mt-6">
-                                        <button onClick={() => nav('/contact-us')} className="bg-[#1574C0] text-white font-medium italic px-5 py-2.5 rounded-2xl flex items-center hover:bg-[#105b96] transition duration-300">
-                                            Book Now <FaRightLong className="ml-2" />
+                                        <button
+                                            onClick={() => nav(item.path)}
+                                            className="bg-[#1574C0] text-white font-medium italic px-5 py-2.5 rounded-2xl flex items-center hover:bg-[#105b96] transition duration-300"
+                                        >
+                                            Explore <FaRightLong className="ml-2" />
                                         </button>
                                     </div>
                                 </div>
@@ -165,7 +174,7 @@ export default function AirconserviceResidential() {
                     </div>
                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide">For Both Residential & Commercial</h1>
                     <p className="text-base sm:text-lg md:text-xl font-medium tracking-wide">24/7 Customer Support</p>
-                    <button className='mx-auto font-medium text-white bg-blue-600 text-lg tracking-wider border border-blue-600 px-3 py-2 rounded-md hover:bg-transparent hover:border-white transition-colors ease-in-out cusp shadow '>Book a Consultation </button>
+                    <button onClick={() => setShow(true)} className='mx-auto cursor-pointer font-medium text-white bg-blue-600 text-lg tracking-wider border border-blue-600 px-3 py-2 rounded-md hover:bg-transparent hover:border-white transition-colors ease-in-out cusp shadow '>Book a Consultation </button>
                 </div>
             </div>
 

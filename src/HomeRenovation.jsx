@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Layout from './Layout/Layout';
 import {
   FaRightLong,
@@ -12,6 +12,7 @@ import {
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import GradientCTABanner from './CTADiscountSection';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from './Auth/Authprovider';
 
 
 const baner = 'https://img.freepik.com/free-photo/full-shot-people-carrying-placard-together_23-2149328067.jpg?ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80'
@@ -67,6 +68,10 @@ const services = [
 ];
 
 export default function HomeRenovation() {
+  const { setShow } = useContext(AuthContext)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Layout>
       {/* Page Banner */}
@@ -145,7 +150,7 @@ export default function HomeRenovation() {
           </div>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide">For Both Residential & Commercial</h1>
           <p className="text-base sm:text-lg md:text-xl font-medium tracking-wide">24/7 Customer Support</p>
-          <button className='mx-auto font-medium text-white bg-blue-600 text-lg tracking-wider border border-blue-600 px-3 py-2 rounded-md hover:bg-transparent hover:border-white transition-colors ease-in-out cusp shadow '>Book a Consultation </button>
+          <button onClick={() => setShow(true)} className='mx-auto font-medium text-white bg-blue-600 text-lg tracking-wider border border-blue-600 px-3 py-2 rounded-md hover:bg-transparent hover:border-white transition-colors ease-in-out cusp shadow '>Book a Consultation </button>
         </div>
       </div>
 

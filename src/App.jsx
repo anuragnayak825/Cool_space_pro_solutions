@@ -10,6 +10,12 @@ import ContactFormPopup from './ContactFormPopup';
 const Home = lazy(() => import("./page/Home"));
 const About = lazy(() => import("./page/About"));
 const ContactUs = lazy(() => import("./page/ContactUs"));
+const Service_Cleaning = lazy(() => import('./components/Service_Cleaning'));
+const Aircon_Installation = lazy(() => import('./components/Aircon_Installation'));
+const Cassette_Service = lazy(() => import('./components/Cassette_Service'));
+const Wall_Mounted_Service = lazy(() => import('./components/Wall_Mounted_Service'));
+const Duct_Cleaning = lazy(() => import('./components/Duct_Cleaning'));
+const Water_Leaking_Service = lazy(() => import('./components/Water_Leaking_Service'));
 const AirconserviceResidential = lazy(() => import('./AirconserviceResidential'));
 const AirconServiceCommercial = lazy(() => import('./AirconServiceCommercial'));
 const InteriorResidential = lazy(() => import('./InteriorResidential'));
@@ -20,22 +26,24 @@ function App() {
   
   return (
     <BrowserRouter>
-      {/* ✅ Cursor Bubble Global */}
       <CursorBubble />
       <StickyCallWhatsappButton />
-      {/* <div className="min-h-screen flex items-center justify-center fixed z-40 bg-gray-100"> */}
       <ContactFormPopup />
-      {/* </div> */}
-
-      {/* All Lazy Routes */}
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path='/' element={<Home  />} />
           <Route path='/about' element={<About />} />
           <Route path='aircon-service' element={<AirconserviceResidential />} />
-          {/* <Route path='/aircon-service/commercial' element={<AirconServiceCommercial />} /> */}
+          {/* AIRCON SERVICE  */}
+          <Route path='/aircon/cleaning' element={<Service_Cleaning />} />
+          <Route path='/aircon/wall-mounted' element={<Wall_Mounted_Service />} />
+          <Route path='/aircon/cassette-service' element={<Cassette_Service />} />
+          <Route path='/aircon/duct-cleaning' element={<Duct_Cleaning />} />
+          <Route path='aircon/air-installation' element={<Aircon_Installation />} />
+          <Route path='/aircon/water-leaking-service' element={<Water_Leaking_Service />} />
+
           <Route path='/interior' element={<InteriorResidential />} />
-          {/* <Route path='/interior/commercial' element={<InteriorCommercial />} /> */}
+          
           <Route path='/contact-us' element={<ContactUs />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/home-renovation' element={<HomeRenovation />} />

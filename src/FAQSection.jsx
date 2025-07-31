@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { FiPlus, FiMinus } from 'react-icons/fi';
+import { NavLink } from 'react-router-dom';
 
 const faqData = [
-    { question: "First Question", answer: "This is the answer to the first question." },
-    { question: "Second Question", answer: "This is the answer to the second question." },
-    { question: "Third Question", answer: "This is the answer to the third question." },
-    { question: "Fourth Question", answer: "This is the answer to the fourth question." },
-    { question: "Fifth Question", answer: "This is the answer to the fifth question." }
+    { question: "What is aircon service & why is it necessary?", answer: "Aircon service is the maintenance and upkeep of air conditioning systems. It typically includes inspecting and cleaning the air filters, checking refrigerant levels, lubricating moving parts, and inspecting belts and other components. Regular aircon service is necessary to ensure the system runs efficiently and safely and to prolong its lifespan." },
+    { question: "What happens if you don't service your aircon?", answer: "If you don't service your aircon regularly, dust and dirt can build up on the filter, affecting its performance. This can lead to decreased cooling efficiency, higher electricity bills, and potentially costly repairs. In addition, a lack of servicing can also result in your aircon breaking down more often or not cooling your home properly." },
+    { question: "Can I customize the design as per my taste?", answer: "We offer complete renovation solutions including civil work, flooring, false ceiling, painting, kitchen and bathroom remodeling, electrical, and plumbing upgrades." },
+    { question: "What types of home renovation services do you offer?", answer: "This is the answer to the fourth question." },
+    { question: "Can I use my own materials or brands?", answer: "Yes, you can choose your preferred brands or we can recommend the best as per your budget." }
 ];
 
 export default function FAQSection() {
@@ -61,9 +62,9 @@ export default function FAQSection() {
                             <p className="mb-4 text-sm leading-relaxed">
                                 We're friendly and available to chat. Reach out to us anytime and we'll happily answer your questions.
                             </p>
-                            <button className="mt-2 px-6 py-2 border border-white rounded-full hover:bg-white hover:text-blue-600 transition font-medium">
+                            <NavLink to={'/contact-us'} className="mt-2 px-6 py-2 border border-white rounded-full hover:bg-white hover:text-blue-600 transition font-medium">
                                 CONTACT US
-                            </button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>

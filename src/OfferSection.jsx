@@ -1,7 +1,9 @@
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
 
 export default function OfferSection() {
+    const nav = useNavigate()
     return (
         <section className="w-full bg-white min-h-screen flex flex-col lg:flex-row items-center justify-between px-6 md:px-14 lg:px-24 py-12 gap-10">
 
@@ -10,11 +12,11 @@ export default function OfferSection() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight text-center">
                     Bringing Luxury & Functionality Into Every Corner
                 </h1>
-                <p className="text-lg md:text-xl lg:text-2xl mt-6 text-gray-700 leading-relaxed tracking-wide">
+                <p className="text-lg md:text-xl text-center lg:text-2xl mt-6 text-gray-700 leading-relaxed tracking-wide">
                     From top-tier air conditioning to luxurious renovations — we bring expertise, elegance, and efficiency to every project. No hidden costs, just real transformation.
                 </p>
 
-                <button className="mt-8 w-max px-6 py-3 mx-auto bg-green-600 text-white font-semibold rounded-lg flex items-center gap-2 hover:bg-green-700 transition-all duration-300">
+                <button   onClick={() => window.open('https://wa.me/919999999999', '_blank')} className="mt-8 cursor-pointer w-max px-6 py-3 mx-auto bg-green-600 text-white font-semibold rounded-lg flex items-center gap-2 hover:bg-green-700 transition-all duration-300">
                     <FaWhatsapp /> Chat on WhatsApp
                 </button>
             </div>
