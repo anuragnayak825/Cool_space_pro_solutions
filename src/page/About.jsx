@@ -19,7 +19,7 @@ export default function About() {
 
     return (
         <Layout>
-            <div className="w-full h-[60vh] bg-no-repeat bg-center bg-cover relative bg-[url('https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/page-banner.jpg')]">
+            <div className="w-full h-[40vh] bg-no-repeat bg-center bg-cover relative bg-[url('https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/page-banner.jpg')]">
                 {/* Overlay with content */}
                 <div className="absolute inset-0 w-full h-full bg-[#152042e6] flex flex-col justify-center items-center space-y-4 text-center px-4">
                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white">

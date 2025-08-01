@@ -38,9 +38,9 @@ export default function Header() {
       const currentScrollY = window.scrollY;
       setIsScrolled(currentScrollY > lastScrollY);
 
-      if (currentScrollY > lastScrollY + 20) {
+      if (currentScrollY > lastScrollY + 0) {
         setShowSticky(false);
-      } else if (currentScrollY < lastScrollY - 20) {
+      } else if (currentScrollY < lastScrollY - 0) {
         setShowSticky(true);
       }
 
@@ -68,7 +68,7 @@ export default function Header() {
       name: "Aircon Service",
       path: "/aircon-service",
       children: [
-        { name: "Aircond Service & Cleaning", path: "/aircon/cleaning" },
+        { name: "Aircond Service & Reapir", path: "/aircon/repair" },
         { name: "Wall Mounted Service", path: "/aircon/wall-mounted" },
         { name: "Cassette Service", path: "/aircon/cassette-service" },
         { name: "Duct Cleaning", path: "/aircon/duct-cleaning" },
@@ -92,7 +92,7 @@ export default function Header() {
       transition={{ type: 'spring', stiffness: 80, damping: 20 }}
       className="sticky top-0 w-full z-50"
     >
-      <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-20 py-3 flex items-center justify-between">
+      <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 py-3 flex items-center justify-between">
         <img src={Logo} alt="Logo" className="h-12 sm:h-14 md:h-18 object-contain" />
 
         {/* Desktop Nav */}
@@ -181,14 +181,14 @@ export default function Header() {
 
         {/* Contact & Social */}
         <div className='flex space-x-7'>
-          <div className="hidden lg:flex items-center gap-3 border-l pl-4 border-gray-300">
-            <a href="tel:+60123456789" className="flex items-center text-sm font-medium">
-              <FiPhone className="mr-2 text-base" />
-              <span className="hidden md:inline text-lg">+60 12-345 6789</span>
+          <div className="hidden xl:flex items-center gap-3 border-l pl-4 border-gray-300">
+            <a href="tel:+60123456789" className="flex items-center text-sm font-medium ">
+              <FiPhone className="mr-2 xl:text-base " />
+              <span className="hidden md:inline text-lg md:text-lg ">+60 12-345 6789</span>
             </a>
           </div>
           <div className="hidden lg:flex items-center gap-3 border-l pl-4 border-gray-300">
-            <p className='font-normal text-gray-500 text-sm underline cursor-pointer'>Follow us</p>
+            <p className='font-normal text-gray-500 text-sm underline cursor-pointer md:hidden xl:block'>Follow us</p>
             <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-[#1574C0] hover:text-[#00C4CC] transition text-lg">
               <FaFacebookF />
             </a>
@@ -262,17 +262,25 @@ export default function Header() {
                     transition={{ delay: index * 0.1 }}
                     className="space-y-1"
                   >
-                    <div
-                      onClick={() => toggleSubmenu(item.name)}
-                      className="flex justify-between items-center text-[#1574C0] uppercase italic font-semibold hover:text-[#00C4CC] transition cursor-pointer"
-                    >
-                      {item.name}
-                      {item.children && (
+                    {item.children ? (
+                      <div
+                        onClick={() => toggleSubmenu(item.name)}
+                        className="flex justify-between items-center text-[#1574C0] uppercase italic font-semibold hover:text-[#00C4CC] transition cursor-pointer"
+                      >
+                        {item.name}
                         <IoIosArrowDown
                           className={`transition-transform duration-300 ${expandedService === item.name ? 'rotate-180' : ''}`}
                         />
-                      )}
-                    </div>
+                      </div>
+                    ) : (
+                      <NavLink
+                        to={item.path}
+                        onClick={() => setMenuOpen(false)}
+                        className="text-[#1574C0] uppercase italic font-semibold hover:text-[#00C4CC] transition"
+                      >
+                        {item.name}
+                      </NavLink>
+                    )}
 
                     <AnimatePresence>
                       {expandedService === item.name && item.children && (

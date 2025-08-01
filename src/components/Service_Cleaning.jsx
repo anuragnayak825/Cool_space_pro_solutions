@@ -42,10 +42,10 @@ export default function Service_Cleaning() {
       >
         <div className="absolute inset-0 w-full h-full bg-[#152042c5] flex flex-col justify-center items-center text-center px-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white">
-            Aircon Service & Cleaning
+            Aircon Service & Repair
           </h1>
           <div className="flex items-center gap-3 text-white text-base sm:text-lg md:text-xl mt-2">
-            Home <FaRightLong className="text-sm sm:text-base" /> Aircon Service & Cleaning
+            Home <FaRightLong className="text-sm sm:text-base" /> Aircon Service & Repair
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ export default function Service_Cleaning() {
           Expert Engineer for
         </h2>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide mt-4 max-w-5xl">
-          Cool Space Pro Solutions Provides Efficient Aircon Service & Cleaning
+          Cool Space Pro Solutions Provides Efficient Aircon Service & Reapir
         </h1>
         <p className="text-base sm:text-lg font-normal tracking-wide max-w-6xl mt-4 text-gray-700">
           Cool Space Pro Solutions specializes in delivering fast, reliable, and affordable air

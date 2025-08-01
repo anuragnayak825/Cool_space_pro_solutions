@@ -81,7 +81,7 @@ export default function AboutSection() {
                     </div>
                     <div className='group  lg:hidden w-auto flex justify-center items-center  relative  overflow-hidden'>
                         <motion.div
-
+                            onClick={() => nav('/about')}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                             className="flex items-center w-auto  space-x-2 text-[#00C4CC] py-2.5 px-3.5 border group-hover:border font-semibold  rounded-md cursor-pointer"
                         >

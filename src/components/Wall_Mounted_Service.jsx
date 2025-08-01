@@ -59,7 +59,7 @@ export default function Wall_Mounted_Service() {
   ];
   return (
     <Layout>
-      <div className="w-full h-[60vh] bg-no-repeat bg-center bg-cover relative" style={{ backgroundImage: `url(${img})` }} >
+      <div className="w-full h-[40vh] bg-no-repeat bg-center bg-cover relative" style={{ backgroundImage: `url(${img})` }} >
         <div className="absolute inset-0 w-full h-full bg-[#152042c5] flex flex-col justify-center items-center space-y-4 text-center px-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white">Wall Mounted Service</h1>
           <div className="flex items-center gap-3 text-white text-base sm:text-lg md:text-xl">
@@ -68,10 +68,10 @@ export default function Wall_Mounted_Service() {
         </div>
       </div>
 
-      <section className='w-full h-auto py-10 px-20 '>
-        <h1 className='text-lg tracking-wider text-[#1574C0] font-bold italic '>Expert Engineer for</h1>
-        <h1 className='text-5xl font-bold tracking-wide max-w-5xl mt-4'>Cool Space Pro Solutions Provides Efficient Wall Mounted Service</h1>
-        <p className='text-lg font-normal tracking-wide max-w-6xl mt-4'>
+      <section className='w-full h-auto py-12 px-4 sm:px-6 md:px-10 lg:px-20'>
+        <h1 className='text-base sm:text-lg tracking-wide text-[#1574C0] font-bold italic'>Expert Engineer for</h1>
+        <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide mt-4 max-w-5xl'>Cool Space Pro Solutions Provides Efficient Wall Mounted Service</h1>
+        <p className='text-base sm:text-lg font-normal tracking-wide max-w-6xl mt-4 text-gray-700'>
           Cool Space Pro Solutions offers specialized servicing for wall-mounted air
           conditioning units, ensuring optimal performance and long-term reliability.
           Our trained technicians carefully inspect, clean, and maintain every component—from
@@ -81,8 +81,8 @@ export default function Wall_Mounted_Service() {
           needs. With our commitment to quality and customer satisfaction, we help you enjoy
           uninterrupted comfort in every corner of your space.
         </p>
-        <h1 className='text-2xl font-semibold tracking-wide mt-4'>Why Regular Wall Mounted Aircond Servicing is Essential</h1>
-        <ul className='mt-4 space-y-3.5 px-5 text-lg font-normal tracking-wide'>
+        <h1 className='text-xl sm:text-2xl font-semibold tracking-wide mt-6'>Why Regular Wall Mounted Aircond Servicing is Essential</h1>
+        <ul className='mt-4 space-y-3 pl-5 text-base sm:text-lg text-gray-700'>
           <li><strong>Healthier Indoor Air Quality:</strong>Routine servicing removes trapped dust, pollen, bacteria, and mold from filters and coils — ensuring you breathe clean, allergen-free air. Perfect for homes with children, elderly, or asthma sufferers.</li>
           <li><strong>Faster & More Consistent Cooling:</strong> A clean AC unit cools your space quickly and distributes cold air evenly across the room. No more hot spots or uneven temperatures.</li>
           <li><strong>Significant Energy Savings:</strong>Dirty units consume more electricity. Regular maintenance improves energy efficiency, helping you save on monthly utility bills without sacrificing comfort.</li>
@@ -91,8 +91,7 @@ export default function Wall_Mounted_Service() {
         </ul>
       </section>
 
-
-      <section className="w-full bg-white py-16 px-4 sm:px-6 md:px-12 lg:px-24">
+      <section className="w-full bg-white py-10 px-4 sm:px-6 md:px-12 lg:px-24">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">
           Wall Mounted AC Service Procedure
         </h2>
