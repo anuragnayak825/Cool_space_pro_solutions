@@ -8,12 +8,12 @@ import StickyCallWhatsappButton from './StickyCallWhatsappButton';
 import ContactFormPopup from './ContactFormPopup';
 import Residential from './Residential';
 import Commercial from './Commercial';
-import Kitchen_Remodeling from './Homerenovation/Kitchen_Remodeling';
-import Bathroom_Renovations from './Homerenovation/Bathroom_Renovations';
-import Exterior_Renovations from './Homerenovation/Exterior_Renovations';
-import Basement_Finishing from './Homerenovation/Basement_Finishing';
+import Kitchen_Remodeling from './Homerenovation/kitchen_remodeling';
+import Bathroom_Renovations from './Homerenovation/bathroom_renovations';
+import Exterior_Renovations from './Homerenovation/exterior_renovations';
+import Basement_Finishing from './Homerenovation/basement_finishing';
 import Whole_Home_Renovations from './Homerenovation/Whole_ome_Renovations';
-import Interior_Remodeling from './Homerenovation/Interior_Remodeling';
+import Interior_Remodeling from './Homerenovation/interior_remodeling';
 
 // import HomeRenovation from './HomeRenovation';
 
@@ -52,7 +52,8 @@ function App() {
           <Route path='/duct-cleaning' element={<Duct_Cleaning />} />
           <Route path='/air-installation' element={<Aircon_Installation />} />
           <Route path='/water-leaking-service' element={<Water_Leaking_Service />} />
-          <Route path='/aircon/residental-service' element={<Residential />} />
+          <Route path='/residental-service' element={<Residential />} />
+          <Route path='/commercial-service' element={<Commercial />} />
           <Route path='/service' element={<AirconService />} />
           <Route path='/repair' element={<AirconRepair />} />
           <Route path='/maintenace' element={<AirconMaintenance />} />
@@ -60,12 +61,12 @@ function App() {
           <Route path='/interior' element={<InteriorResidential />} />
           {/* HOme Renobvation  */}
           <Route path='/home-renovation' element={<HomeRenovation />} />
-          <Route path='/kitchen_remodeling' element={<Kitchen_Remodeling />} />
-          <Route path='/bathroom_renovations' element={<Bathroom_Renovations />} />
-          <Route path='/exterior_renovations' element={<Exterior_Renovations />} />
-          <Route path='/basement_finishing' element={<Basement_Finishing />} />
-          <Route path='/whole_home_renovations' element={<Whole_Home_Renovations />} />
-          <Route path='/interior_remodeling' element={<Interior_Remodeling />} />
+          <Route path='/kitchen-remodeling' element={<Kitchen_Remodeling />} />
+          <Route path='/bathroom-renovations' element={<Bathroom_Renovations />} />
+          <Route path='/exterior-renovations' element={<Exterior_Renovations />} />
+          <Route path='/basement-finishing' element={<Basement_Finishing />} />
+          <Route path='/wholehome-renovations' element={<Whole_Home_Renovations />} />
+          <Route path='/interior-remodeling' element={<Interior_Remodeling />} />
 
 
           <Route path='/contact-us' element={<ContactUs />} />

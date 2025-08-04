@@ -189,7 +189,7 @@ export default function AirconserviceResidential() {
                                 <p className='text-lg font-normal italic tracking-wider mt-6'>
                                     At CoolSpace Pro Solutions, we understand how essential it is to maintain a comfortable and healthy environment at home—especially in India’s hot and humid climate. Our Residential Air Conditioning Services are designed to offer seamless, efficient, and long-lasting cooling for your living spaces.
                                 </p>
-                                <NavLink to={'/aircon/residental-service'} className='w-full py-3.5 flex justify-center items-center mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold italic text-xl px-3 rounded-2xl'>
+                                <NavLink to={'/residental-service'} className='w-full py-3.5 flex justify-center items-center mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold italic text-xl px-3 rounded-2xl'>
                                     Learn More <FaArrowRightLong className='ml-2.5' />
                                 </NavLink>
                             </div>
@@ -227,7 +227,7 @@ export default function AirconserviceResidential() {
                                 <p className='text-lg font-normal italic tracking-wider mt-6'>
                                     At CoolSpace Pro Solutions, we help businesses stay cool and productive with reliable air conditioning. Our commercial AC services are tailored for offices, showrooms, hotels, and more. We deliver efficient, scalable, and long-lasting cooling solutions for every business need.
                                 </p>
-                                <NavLink to={'/aircon/commercial-service'} className='w-full py-3.5 flex justify-center items-center mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold italic text-xl px-3 rounded-2xl'>
+                                <NavLink to={'/commercial-service'} className='w-full py-3.5 flex justify-center items-center mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold italic text-xl px-3 rounded-2xl'>
                                     Learn More <FaArrowRightLong className='ml-2.5' />
                                 </NavLink>
                             </div>

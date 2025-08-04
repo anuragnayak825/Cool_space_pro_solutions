@@ -40,7 +40,7 @@ export default function ContactUs() {
           </div>
           <h2 className="text-2xl font-semibold italic tracking-wider">Phone</h2>
           <p className="text-base font-medium text-gray-600 text-center">
-            +60 18-781 9615
+            +60 11-2441 9414
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export default function ContactUs() {
           </div>
           <h2 className="text-2xl font-semibold italic tracking-wider">Email</h2>
           <p className="text-base font-medium text-gray-600 text-center">
-            heroairconn@gmail.com
+            exmaple@gmail.com
           </p>
         </div>
       </div>

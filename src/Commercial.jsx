@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Layout from './Layout/Layout'
 import { useLocation } from 'react-router-dom'
 import QuotationForm from './QuotationForm2'
@@ -11,6 +11,9 @@ const Heading2 = 'Commercial Aircon Services In KL';
     const offer = 'Fill in our form to receive a no obligation FREE quote today plus a 10% discount on a chemical clean.';
 
 export default function Commercial() {
+     useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     const location = useLocation();
     const [service, setservice] = useState([])
     const commercialServices = [
@@ -62,9 +65,9 @@ export default function Commercial() {
     return (
         <Layout>
             {/* Hero Section */}
-            <div className="w-full h-[40vh] bg-no-repeat bg-center bg-cover relative" style={{ backgroundImage: `url(${location.pathname === '/aircon/residental-service' ? bannerImg : bannerimg2})` }}>
+            <div className="w-full h-[40vh] bg-no-repeat bg-center bg-cover relative" style={{ backgroundImage: `url(${location.pathname === '/residental-service' ? bannerImg : bannerimg2})` }}>
                 <div className="absolute inset-0 w-full h-full bg-[#152042c5] px-4 md:px-10 lg:px-20 py-10">
-                    <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide italic'>{location.pathname === '/aircon/residental-service' ? Heading : Heading2}</h1>
+                    <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide italic'>{location.pathname === '/residental-service' ? Heading : Heading2}</h1>
                     <p className='text-white text-base md:text-lg lg:text-xl mt-4 md:mt-6 max-w-3xl tracking-wider'>{offer}</p>
                 </div>
             </div>
@@ -89,7 +92,7 @@ export default function Commercial() {
                         <div className='bg-gray-100 w-10 h-10 md:w-12 md:h-12 flex justify-center items-center rounded-full shadow-sm'>
                             <FaPhone className='text-blue-700 text-lg md:text-xl' />
                         </div>
-                        <p className='font-semibold text-base md:text-xl'>+60 12-345 6789</p>
+                        <p className='font-semibold text-base md:text-xl'>+60 11-2441 9414</p>
                     </div>
                 </div>
 

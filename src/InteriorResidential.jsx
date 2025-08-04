@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import Layout from './Layout/Layout'
 import { FaRightLong } from 'react-icons/fa6'
 import { motion, useScroll, useTransform } from 'framer-motion'
-
 import video from './assets/2474849_Furniture_Modern_1920x1080.mp4'
 import GradientCTABanner from './CTADiscountSection'
 
@@ -46,6 +45,10 @@ const Service = [
 ];
 
 export default function InteriorResidential() {
+    const contentVariants = {
+        hidden: { opacity: 0, x: 100 },
+        visible: { opacity: 1, x: 0 },
+    };
     const { scrollYProgress } = useScroll();
     const lineWidth = useTransform(scrollYProgress, [0, 1], ['100%', '5%']);
     const lineHeight = useTransform(scrollYProgress, [0, 1], ['100%', '.5%']);
@@ -97,7 +100,15 @@ export default function InteriorResidential() {
                         </button>
                     </div>
 
-                    <div className="w-full lg:w-3/4">
+                    {/* Motion Content Section */}
+                    <motion.div
+                        className="w-full lg:w-3/4"
+                        variants={contentVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.4 }} // 0.4 = start animating when 40% visible
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
+                    >
                         <h2 className="text-3xl sm:text-4xl lg:text-6xl font-sans font-bold leading-tight text-black">
                             Explore Our <span className="text-[#00C4CC]">Comprehensive</span><br />
                             <span className="text-[#00C4CC]">Interior Design</span> <span className="text-black">Services</span>
@@ -106,9 +117,11 @@ export default function InteriorResidential() {
                             We specialize in transforming visions into reality. Explore our portfolio of innovative architectural
                             and interior design projects crafted with precision.
                         </p>
-                    </div>
+                    </motion.div>
+
                 </div>
             </div>
+
 
             {/* Service Cards */}
             <div className="w-full h-auto px-4 sm:px-6 lg:px-12 py-6 bg-gray-50">
@@ -141,7 +154,13 @@ export default function InteriorResidential() {
             {/* Contact Section */}
             <div className="w-full flex bg-gray-50 flex-col lg:flex-row items-center justify-between gap-10 relative px-4 sm:px-8 md:px-12 lg:px-20 py-20">
                 {/* Form Side */}
-                <div className="w-full lg:w-1/2 space-y-6 z-10">
+                <motion.div
+                    variants={contentVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false, amount: 0.4 }} // 0.4 = start animating when 40% visible
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                    className="w-full lg:w-1/2 space-y-6 z-10">
                     <div className="flex space-x-2 items-center text-base md:text-lg font-semibold text-[#00C4CC] italic">
                         <h1 className="uppercase">Get in Touch</h1>
                         <hr className="w-8 border border-[#00C4CC]" />
@@ -170,7 +189,7 @@ export default function InteriorResidential() {
                             Get Estimated
                         </button>
                     </form>
-                </div>
+                </motion.div>
 
                 {/* Image Side */}
                 <div className="relative w-full lg:w-1/2 flex justify-center items-center">
@@ -203,7 +222,7 @@ export default function InteriorResidential() {
                     className="hidden sm:block absolute bottom-0 left-0 transform -scale-x-100 "
                 />
             </div>
-            <GradientCTABanner/>
+            <GradientCTABanner />
         </Layout>
     );
 }

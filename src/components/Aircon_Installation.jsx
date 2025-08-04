@@ -24,11 +24,11 @@ export default function Aircon_Installation() {
         className="w-full h-[40vh] bg-no-repeat bg-top bg-cover relative"
         style={{ backgroundImage: `url(${img})` }}
       >
-        <div className="absolute inset-0 w-full h-full bg-[#152042c5] flex flex-col justify-center px-20">
+        <div className="w-full h-full bg-[#152042c5] flex flex-col space-y-4 justify-center px-6 md:px-20">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white">
             Aircon Aircon Installation
           </h1>
-          <div className="flex items-center gap-3 text-white text-base sm:text-lg md:text-xl mt-2">
+          <div className="flex items-center gap-3 text-white text-sm sm:text-lg">
             Home <FaRightLong className="text-sm sm:text-base" /> Aircon Aircon Installation
           </div>
           <h1 className='text-lg md:text-xl font-semibold text-white tracking-wider italic'>

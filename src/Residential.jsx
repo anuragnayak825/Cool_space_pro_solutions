@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Layout from './Layout/Layout'
 import { useLocation } from 'react-router-dom'
 import QuotationForm from './QuotationForm2'
@@ -12,25 +12,28 @@ const repairImg = 'https://img.freepik.com/premium-photo/technician-service-remo
 const cleaningImg = 'https://img.freepik.com/premium-photo/male-technician-cleaning-industrial-air-conditioner-indoors_392895-171462.jpg?w=1060';
 
 export default function Residential() {
+      useEffect(() => {
+            window.scrollTo(0, 0);
+          }, []);
     const location = useLocation();
     const [service, setservice] = useState([])
     const services = [
         {
-            title: 'AC Installation',
+            title: 'Aircon Installation',
             image: acInstallImg,
             points: [
-                'Split AC installation (wall-mounted)',
-                'Window AC installation',
-                'Ducted or central AC system setup',
-                'Inverter AC installation',
+                'Split Aircon installation (wall-mounted)',
+                'Window Aircon installation',
+                'Ducted or central aircon system setup',
+                'Inverter Aircon installation',
                 'Proper sizing & placement for efficient cooling',
             ],
         },
         {
-            title: 'AC Maintenance & Servicing',
+            title: 'Aircon Maintenance & Servicing',
             image: maintenanceImg,
             points: [
-                'Regular AC cleaning (filters, coils, blowers)',
+                'Regular Aircon cleaning (filters, coils, blowers)',
                 'Gas top-up & refrigerant checks',
                 'Electrical connection check-up',
                 'Thermostat calibration',
@@ -38,7 +41,7 @@ export default function Residential() {
             ],
         },
         {
-            title: 'AC Repair',
+            title: 'Aircon Repair',
             image: repairImg,
             points: [
                 'Compressor or fan motor repair',
@@ -49,7 +52,7 @@ export default function Residential() {
             ],
         },
         {
-            title: 'AC Deep Cleaning / Chemical Cleaning',
+            title: 'Aircon Deep Cleaning / Chemical Cleaning',
             image: cleaningImg,
             points: [
                 'Full disassembly & deep internal cleaning',
@@ -66,16 +69,16 @@ export default function Residential() {
     const Heading = 'Residential Aircon Services In KL';
     const offer = 'Fill in our form to receive a no obligation FREE quote today plus a 10% discount on a chemical clean.';
 
-    if (location.pathname === '/aircon/residental-service') {
+    if (location.pathname === '/residental-service') {
         // Add any future condition logic if needed
     }
 
     return (
         <Layout>
             {/* Hero Section */}
-            <div className="w-full h-[40vh] bg-no-repeat bg-center bg-cover relative" style={{ backgroundImage: `url(${location.pathname === '/aircon/residental-service' ? bannerImg : bannerimg2})` }}>
+            <div className="w-full h-[40vh] bg-no-repeat bg-center bg-cover relative" style={{ backgroundImage: `url(${location.pathname === '/residental-service' ? bannerImg : bannerimg2})` }}>
                 <div className="absolute inset-0 w-full h-full bg-[#152042c5] px-4 md:px-10 lg:px-20 py-10">
-                    <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide italic'>{location.pathname === '/aircon/residental-service' ? Heading : Heading2}</h1>
+                    <h1 className='text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide italic'>{location.pathname === '/residental-service' ? Heading : Heading2}</h1>
                     <p className='text-white text-base md:text-lg lg:text-xl mt-4 md:mt-6 max-w-3xl tracking-wider'>{offer}</p>
                 </div>
             </div>
@@ -92,7 +95,7 @@ export default function Residential() {
                         We offer a comprehensive range of air conditioning systems tailored for all kinds of spaces — from corporate offices and local retail stores to large commercial complexes and industrial facilities.
                     </p>
                     <p className='text-gray-500 mt-6 text-base md:text-lg xl:text-xl font-semibold max-w-2xl'>
-                        For residential clients, we offer everything from split and inverter AC installations to deep chemical cleaning services that ensure fresh, healthy air throughout your living spaces.
+                        For residential clients, we offer everything from split and inverter Aircon installations to deep chemical cleaning services that ensure fresh, healthy air throughout your living spaces.
 
                         For commercial spaces, we design and install efficient HVAC systems for offices, retail stores, factories, and warehouses. Our maintenance programs are designed to reduce downtime and energy costs while improving system longevity.
                     </p>
@@ -100,7 +103,7 @@ export default function Residential() {
                         <div className='bg-gray-100 w-10 h-10 md:w-12 md:h-12 flex justify-center items-center rounded-full shadow-sm'>
                             <FaPhone className='text-blue-700 text-lg md:text-xl' />
                         </div>
-                        <p className='font-semibold text-base md:text-xl'>+60 12-345 6789</p>
+                        <p className='font-semibold text-base md:text-xl'>+60 11-2441 9414</p>
                     </div>
                 </div>
 
@@ -112,7 +115,7 @@ export default function Residential() {
             {/* Services Section */}
             <section className="w-full bg-gray-50 py-16 px-4 md:px-10 lg:px-20">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900">
-                    Residential AC Services
+                    Residential Aircon Services
                 </h2>
 
                 <div className="grid gap-10 grid-cols-1 md:grid-cols-2">

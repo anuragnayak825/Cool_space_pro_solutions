@@ -1,21 +1,33 @@
-import React from 'react'
+import React, { useRef } from 'react';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { GrServices } from "react-icons/gr";
-import { HiMiniArrowTurnLeftDown, HiMiniArrowTurnRightDown } from "react-icons/hi2";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { NavLink, useNavigate } from 'react-router-dom';
 
-
 export default function AboutSection() {
-    const nav = useNavigate()
+    const nav = useNavigate();
+    const sectionRef = useRef(null);
+    const isInView = useInView(sectionRef, { once: true, margin: '-100px' });
+
     return (
-        <div className='w-full min-h-[100vh] flex flex-col lg:flex-row justify-center items-center p-5 sm:p-10 space-y-10 lg:space-y-0 lg:space-x-8'>
+        <div
+            ref={sectionRef}
+            className='w-full min-h-[100vh] flex flex-col lg:flex-row justify-center items-center p-5 sm:p-10 space-y-10 lg:space-y-0 lg:space-x-8 overflow-hidden'
+        >
 
             {/* Image Section */}
-            <div className='w-full max-w-3xl flex justify-center items-center'>
+            <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
+                className='w-full max-w-3xl flex justify-center items-center'
+            >
                 <div className='w-full relative max-w-[460px] h-[75vh] sm:h-[70vh] md:h-[60vh] lg:h-[75vh]'>
-                    <img src="https://invernawp.themesflat.co/wp-content/uploads/2025/02/about_img_2-min.jpg" alt=""
-                        className='w-full h-full object-cover rounded-2xl' />
+                    <img
+                        src="https://invernawp.themesflat.co/wp-content/uploads/2025/02/about_img_2-min.jpg"
+                        alt=""
+                        className='w-full h-full object-cover rounded-2xl'
+                    />
 
                     {/* Floating Image Card */}
                     <div className='w-40 sm:w-48 md:w-56 bg-white absolute h-[130px] sm:h-[160px] md:h-[200px] border-[6px] md:rounded-xl border-white bottom-6 right-0 sm:-right-12 md:-right-16 transition-transform duration-300 hover:-translate-y-2.5'>
@@ -39,13 +51,18 @@ export default function AboutSection() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Text Content Section */}
-            <div className='w-full max-w-3xl flex justify-start items-center'>
+            <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+                className='w-full max-w-3xl flex justify-start items-center'
+            >
                 <div className='w-full space-y-6 relative px-2 sm:px-6 md:px-10'>
-                    <div className=' hidden  max-w-[250px] relative border-[3px] lg:flex justify-center items-center border-[#00C4CC] px-3.5 py-3'>
-                        <span className='font-semibold text-sm sm:text-base md:text-lg tracking-wider absolute -top-4 bg-white px-2.5 '> About our community</span>
+                    <div className='hidden max-w-[250px] relative border-[3px] lg:flex justify-center items-center border-[#00C4CC] px-3.5 py-3'>
+                        <span className='font-semibold text-sm sm:text-base md:text-lg tracking-wider absolute -top-4 bg-white px-2.5'> About our community</span>
                     </div>
                     <div className='lg:hidden max-w-[250px] relative border-[3px] mx-auto flex justify-center items-center border-[#00C4CC] px-4 py-3 mb-4'>
                         <span className='font-bold text-base sm:text-lg md:text-xl tracking-wide absolute -top-4 bg-white px-4 italic'>
@@ -68,30 +85,30 @@ export default function AboutSection() {
                         </div>
                     </div>
 
-                    <div className='group hidden w-auto lg:flex justify-start items-center  relative  overflow-hidden'>
+                    <div className='group hidden w-auto lg:flex justify-start items-center relative overflow-hidden'>
                         <motion.div
                             whileHover={{ x: 100 }}
                             onClick={() => nav('/about')}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="flex items-center w-auto  space-x-2 text-[#00C4CC] py-2.5 px-3.5  font-semibold -translate-x-25 rounded-md cursor-pointer"
+                            className="flex items-center w-auto space-x-2 text-[#00C4CC] py-2.5 px-3.5 font-semibold -translate-x-25 rounded-md cursor-pointer"
                         >
-                            <NavLink className="transition-all duration-300  group-hover:opacity-100">Learn More</NavLink>
+                            <NavLink className="transition-all duration-300 group-hover:opacity-100">Learn More</NavLink>
                             <FaArrowRightLong className="text-lg" />
                         </motion.div>
                     </div>
-                    <div className='group  lg:hidden w-auto flex justify-center items-center  relative  overflow-hidden'>
+
+                    <div className='group lg:hidden w-auto flex justify-center items-center relative overflow-hidden'>
                         <motion.div
                             onClick={() => nav('/about')}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                            className="flex items-center w-auto  space-x-2 text-[#00C4CC] py-2.5 px-3.5 border group-hover:border font-semibold  rounded-md cursor-pointer"
+                            className="flex items-center w-auto space-x-2 text-[#00C4CC] py-2.5 px-3.5 border group-hover:border font-semibold rounded-md cursor-pointer"
                         >
-                            <span className="transition-all duration-300  group-hover:opacity-100">Learn More</span>
+                            <span className="transition-all duration-300 group-hover:opacity-100">Learn More</span>
                             <FaArrowRightLong className="text-lg" />
                         </motion.div>
                     </div>
                 </div>
-            </div>
-
+            </motion.div>
         </div>
-    )
+    );
 }
