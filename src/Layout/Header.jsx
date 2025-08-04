@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaInstagram, FaTimes } from 'react-icons/fa';
 import { FiPhone, FiMenu } from 'react-icons/fi';
@@ -16,6 +16,7 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [expandedService, setExpandedService] = useState(null);
   const hoverTimeoutRef = useRef(null);
+  const naviget = useNavigate()
 
   const handleServiceMouseEnter = () => {
     clearTimeout(hoverTimeoutRef.current);
@@ -68,12 +69,10 @@ export default function Header() {
       name: "Aircon Service",
       path: "/aircon-service",
       children: [
-        { name: "Aircond Service & Reapir", path: "/aircon/repair" },
-        { name: "Wall Mounted Service", path: "/aircon/wall-mounted" },
-        { name: "Cassette Service", path: "/aircon/cassette-service" },
-        { name: "Duct Cleaning", path: "/aircon/duct-cleaning" },
-        { name: "Water Leaking Service", path: "/aircon/water-leaking-service" },
-        { name: "Aircon Installation", path: "/aircon/air-installation" },
+        { name: "Aircon Service", path: "/service" },
+        { name: "Aircon Repair", path: "/repair" },
+        { name: "Aircon Maintenance", path: "/maintenace" },
+        { name: "Aircon Installation", path: "/air-installation" },
       ]
     },
     { name: "Interior Design", path: "/interior" },
@@ -93,7 +92,7 @@ export default function Header() {
       className="sticky top-0 w-full z-50"
     >
       <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-20 py-3 flex items-center justify-between">
-        <img src={Logo} alt="Logo" className="h-12 sm:h-14 md:h-18 object-contain" />
+        <img onClick={() => naviget('/')} src={Logo} alt="Logo" className="h-12 sm:h-14 md:h-18 object-contain" />
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex flex-wrap gap-x-6 text-xs sm:text-base items-center font-semibold text-[#1574C0] uppercase">
@@ -184,12 +183,12 @@ export default function Header() {
           <div className="hidden xl:flex items-center gap-3 border-l pl-4 border-gray-300">
             <a href="tel:+60123456789" className="flex items-center text-sm font-medium ">
               <FiPhone className="mr-2 xl:text-base " />
-              <span className="hidden md:inline text-lg md:text-lg ">+60 12-345 6789</span>
+              <span className="hidden md:inline text-lg md:text-lg ">+60 11-2441 9414</span>
             </a>
           </div>
           <div className="hidden lg:flex items-center gap-3 border-l pl-4 border-gray-300">
             <p className='font-normal text-gray-500 text-sm underline cursor-pointer md:hidden xl:block'>Follow us</p>
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-[#1574C0] hover:text-[#00C4CC] transition text-lg">
+            <a href="https://www.facebook.com/coolspaceprosolution" target="_blank" rel="noreferrer" className="text-[#1574C0] hover:text-[#00C4CC] transition text-lg">
               <FaFacebookF />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#1574C0] hover:text-[#00C4CC] transition text-lg">
@@ -227,7 +226,7 @@ export default function Header() {
               className="fixed top-0 right-0 w-4/5 sm:w-1/2 h-full bg-white z-40 shadow-lg flex flex-col px-6 py-6 overflow-y-auto"
             >
               <div className="flex justify-between items-center mb-6">
-                <img src={Logo} alt="Logo" className="h-12" />
+                <img onClick={() => naviget('/')} src={Logo} alt="Logo" className="h-12" />
                 <button
                   onClick={() => setMenuOpen(false)}
                   className="text-2xl text-[#1574C0] hover:text-[#00C4CC] transition"
@@ -263,14 +262,22 @@ export default function Header() {
                     className="space-y-1"
                   >
                     {item.children ? (
-                      <div
-                        onClick={() => toggleSubmenu(item.name)}
-                        className="flex justify-between items-center text-[#1574C0] uppercase italic font-semibold hover:text-[#00C4CC] transition cursor-pointer"
-                      >
-                        {item.name}
-                        <IoIosArrowDown
-                          className={`transition-transform duration-300 ${expandedService === item.name ? 'rotate-180' : ''}`}
-                        />
+                      <div className="flex justify-between items-center">
+                        <NavLink
+                          to={item.path}
+                          onClick={() => setMenuOpen(false)}
+                          className="text-[#1574C0] uppercase italic font-semibold hover:text-[#00C4CC] transition"
+                        >
+                          {item.name}
+                        </NavLink>
+                        <button
+                          onClick={() => toggleSubmenu(item.name)}
+                          className="text-[#1574C0] hover:text-[#00C4CC] transition transform focus:outline-none"
+                        >
+                          <IoIosArrowDown
+                            className={`transition-transform duration-300 ${expandedService === item.name ? 'rotate-180' : ''}`}
+                          />
+                        </button>
                       </div>
                     ) : (
                       <NavLink
@@ -281,6 +288,7 @@ export default function Header() {
                         {item.name}
                       </NavLink>
                     )}
+
 
                     <AnimatePresence>
                       {expandedService === item.name && item.children && (
@@ -305,6 +313,20 @@ export default function Header() {
                     </AnimatePresence>
                   </motion.div>
                 ))}
+
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 3 * 0.08 }}
+                >
+                  <NavLink
+                    to={'/contact-us'}
+                    onClick={() => setMenuOpen(false)}
+                    className="text-[#1574C0] uppercase italic font-semibold hover:text-[#00C4CC] transition"
+                  >
+                    Contact
+                  </NavLink>
+                </motion.div>
               </div>
 
               <motion.div
@@ -318,10 +340,10 @@ export default function Header() {
                   className="w-full block bg-[#1574C0] text-white py-2 rounded-full text-sm font-medium text-center hover:bg-[#00C4CC] transition"
                 >
                   <FiPhone className="inline mr-2" />
-                  +60 12-345 6789
+                  +60 11-2441 9414
                 </a>
                 <div className="flex gap-6 text-[#1574C0] text-xl justify-center">
-                  <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-[#00C4CC] transition transform hover:scale-110">
+                  <a href="https://www.facebook.com/coolspaceprosolution" target="_blank" rel="noreferrer" className="hover:text-[#00C4CC] transition transform hover:scale-110">
                     <FaFacebookF />
                   </a>
                   <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-[#00C4CC] transition transform hover:scale-110">

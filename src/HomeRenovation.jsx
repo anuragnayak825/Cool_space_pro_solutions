@@ -22,14 +22,17 @@ const services = [
     description:
       "Upgrade your kitchen with modern cabinetry, smart appliances, and stylish finishes tailored to your lifestyle.",
     icon: <FaHammer className="text-2xl " />,
+    path: '/kitchen_remodeling',
     image:
       "https://img.freepik.com/free-photo/workers-talking-phone-doing-paperwork_23-2147668775.jpg?ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80",
   },
   {
     title: "Bathroom Renovations",
+
     description:
       "Transform your bathroom with elegant fixtures, improved layouts, and luxurious finishes for a spa-like feel.",
     icon: <FaToilet className="text-2xl " />,
+    path: '/bathroom_renovations',
     image:
       "https://img.freepik.com/free-photo/medium-shot-senior-man-cleaning-shower_23-2149535084.jpg?ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80",
   },
@@ -38,6 +41,7 @@ const services = [
     description:
       "Turn unused basement space into a functional area like a home theater, gym, or guest suite.",
     icon: <FaPaintRoller className="text-2xl " />,
+    path: '/basement_finishing',
     image:
       "https://img.freepik.com/free-photo/full-shot-woman-painting-wall_52683-100073.jpg?ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80",
   },
@@ -46,6 +50,7 @@ const services = [
     description:
       "Refresh your living space with new layouts, lighting, paint, and custom finishes that reflect your personal style.",
     icon: <FaBrush className="text-2xl " />,
+    path: '/interior_remodeling',
     image:
       "https://img.freepik.com/free-photo/beautiful-shot-modern-house-kitchen-dining-room_181624-2870.jpg?t=st=1753707474~exp=1753711074~hmac=b3e13023035c22b6b887a60e5ab6be6037e347f9cc594290a34e10b2cbb6353d&w=1380",
   },
@@ -54,6 +59,7 @@ const services = [
     description:
       "Enhance curb appeal with exterior painting, siding upgrades, roofing, and patio remodeling solutions.",
     icon: <FaHouseChimney className="text-2xl " />,
+    path: '/exterior_renovations',
     image:
       "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80",
   },
@@ -62,6 +68,7 @@ const services = [
     description:
       "Reimagine your entire home with a full renovation — from structural changes to luxury finishes and smart features.",
     icon: <FaHammer className="text-2xl " />,
+    path: '/whole_home_renovations',
     image:
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
   },
@@ -129,7 +136,7 @@ export default function HomeRenovation() {
 
                 {/* Learn More */}
                 <div className="flex justify-center">
-                  <NavLink to={'/contact-us'} className="text-[#f7c873] font-semibold text-sm hover:underline flex items-center gap-1">
+                  <NavLink to={service?.path} className="text-[#f7c873] font-semibold text-sm hover:underline flex items-center gap-1">
                     LEARN MORE <span className="ml-1">&#8594;</span>
                   </NavLink>
                 </div>

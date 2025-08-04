@@ -8,15 +8,19 @@ export default function ServiceHighlightsSection() {
 
                 {/* AIRCON SERVICE */}
                 <div className=" p-4 md:px-10 md:py-5 ">
-                    <div className="flex items-center bg-[#1574C0] text-white py-1.5 px-1.5 rounded mb-4 ">
+                    <div className=" relative flex justify-self-start  items-center  text-black py-1.5 px-1.5 rounded mb-4 ">
                         <FaSnowflake size={28} className="mr-3" />
                         <h2 className=" text-lg md:text-3xl font-bold">Why Regular Aircon Maintenance Matters</h2>
+
+                        <div className="absolute left-0 -bottom-2 w-full h-[4px] bg-gradient-to-r from-blue-600 to-transparent rounded-full"></div>
                     </div>
-                    <p className="text-sm md:text-lg text-gray-900 font-medium italic tracking-wider leading-relaxed">
+
+
+                    <p className="text-sm md:text-lg text-gray-500 font-medium italic tracking-wider leading-relaxed">
                         Your air conditioning unit needs regular check-ups to perform at its best. Over time, dust and dirt accumulate, reducing efficiency and increasing electricity bills.
                         Our professional aircon maintenance ensures your unit stays clean, energy-efficient, and reliable — preventing future breakdowns and extending its lifespan.
                     </p>
-                    <ul className="mt-5 text-gray-900 font-medium italic tracking-wide space-y-2 list-disc list-inside text-sm md:text-base">
+                    <ul className="mt-5 text-gray-500 font-medium italic tracking-wide space-y-2 list-disc list-inside text-sm md:text-base">
                         <li><span className="font-semibold text-[#00C4CC]">Save on Energy Costs:</span> A well-maintained aircon consumes less power while cooling faster and more effectively.</li>
                         <li><span className="font-semibold text-[#00C4CC]">Prevent Breakdowns:</span> Small issues are resolved early before they turn into costly repairs.</li>
                         <li><span className="font-semibold text-[#00C4CC]">Improve Air Quality:</span> Regular cleaning removes dust, allergens, and mold for fresher, healthier air indoors.</li>
@@ -25,9 +29,11 @@ export default function ServiceHighlightsSection() {
 
                 {/* INTERIOR DESIGN */}
                 <div className="p-6 md:px-10 md:py-5 ">
-                    <div className="flex items-center bg-[#1574C0] text-white py-1.5 px-1.5 rounded  mb-4">
+                    <div className="flex relative justify-self-start items-center  py-1.5 px-1.5 rounded  mb-4">
                         <FaCouch size={28} className="mr-3" />
                         <h2 className="text-lg md:text-3xl font-bold">Transform Your Space with Interior Design</h2>
+                        <div className="absolute left-0 -bottom-2 w-full h-[4px] bg-gradient-to-r from-blue-600 to-transparent rounded-full"></div>
+                        
                     </div>
                     <p className="text-sm md:text-lg text-gray-900 font-medium italic tracking-wider leading-relaxed">
                         Interior design isn’t just about aesthetics — it’s about creating a space that reflects your personality and improves your lifestyle.
@@ -42,9 +48,10 @@ export default function ServiceHighlightsSection() {
 
                 {/* HOME RENOVATION */}
                 <div className=" p-6 md:px-10 md:py-5 ">
-                    <div className="flex items-center bg-[#1574C0] text-white py-1.5 px-1.5 rounded  mb-4">
+                    <div className="flex relative justify-self-start items-center  text-white py-1.5 px-1.5 rounded  mb-4">
                         <FaHammer size={28} className="mr-3" />
                         <h2 className="text-lg md:text-3xl font-bold">Complete Home Renovation Solutions</h2>
+                        <div className="absolute left-0 -bottom-2 w-full h-[4px] bg-gradient-to-r from-blue-600 to-transparent rounded-full"></div>
                     </div>
                     <p className="text-sm md:text-lg text-gray-900 font-medium italic tracking-wider leading-relaxed">
                         Whether you're upgrading a single room or revamping your entire property, our renovation experts deliver stunning transformations with hassle-free execution.

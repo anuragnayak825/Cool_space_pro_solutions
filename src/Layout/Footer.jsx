@@ -14,11 +14,12 @@ export default function Footer() {
                 backgroundImage: `url(https://img.freepik.com/free-photo/air-conditioning-decoration-interior_74190-6226.jpg?t=st=1753861895~exp=1753865495~hmac=b676942d7bf4fc577081b05e60e2f2bfded3ce8daf0ce9c09e968365c53db5c6&w=996)`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                backgroundAttachment: 'fixed',
+                // backgroundAttachment: 'fixed',
             }}
         >
             {/* Blue overlay */}
-            <div className="absolute inset-0 bg-[#1E2350]/80 z-0" />
+            <div className="absolute inset-0  bg-[#1E2350]/90 z-0" />
+            {/* <div className="absolute inset-0  bg-blue-90000 z-0" /> */}
 
             {/* Footer Content */}
             <div className="relative z-10 px-6 py-10 md:px-20">
@@ -35,7 +36,7 @@ export default function Footer() {
                             Behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
                         </p>
                         <div className="flex justify-center md:justify-start gap-3 pt-2">
-                            <NavLink to={''} className="border border-gray-400 rounded-full p-2 hover:bg-blue-600 transition">
+                            <NavLink to={'https://www.facebook.com/coolspaceprosolution'} className="border border-gray-400 rounded-full p-2 hover:bg-blue-600 transition">
                                 <FaFacebookF />
                             </NavLink>
                             <NavLink to={''} className="border border-gray-400 rounded-full p-2 hover:bg-pink-500 transition">
@@ -95,7 +96,7 @@ export default function Footer() {
                     <div>
                         <h3 className="text-xl font-semibold tracking-wider mb-4">Contact Details</h3>
                         <ul className="space-y-3 text-lg text-white italic">
-                            <li className='flex items-center'><FaPhone className='mr-3 text-xl' /> <a to={''}>+60 12-345 6789</a></li>
+                            <li className='flex items-center'><FaPhone className='mr-3 text-xl' /> <a to={''}>+60 11-2441 9414</a></li>
                             <li className='flex items-center'><MdEmail className='mr-3 text-xl' /> <a to={''}>example@gmail.com</a></li>
                             <li className='flex items-center'><FaLocationDot className='mr-3 text-xl' /> <a to={''}>Kuala Lumpur</a></li>
                         </ul>
@@ -103,7 +104,7 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Footer */}
-                <div className="text-center text-sm text-gray-300 mt-10 border-t border-white/20 pt-4">
+                <div className="text-center text-sm text-gray-300 mt-5 border-t border-white/20 pt-4">
                     &copy; {new Date().getFullYear()}. All rights reserved.
                 </div>
             </div>

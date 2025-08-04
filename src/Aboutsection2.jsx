@@ -64,7 +64,7 @@ export default function Aboutsection2() {
 
                     <div className='w-full h-auto flex  items-center gap-5 '>
                         <NavLink to={'/contact-us'} className='px-3 py-2 text-[#00C4CC] font-semibold flex justify-center items-center border hover:text-white hover:bg-[#00C4CC] cursor-pointer transition-colors ease-in-out rounded-md'>Book Now <FaArrowRightLong className='ml-1.5' /></NavLink>
-                        <button  onClick={() => window.open('tel:+919999999999')} className='px-3 py-2 hover:text-[#00C4CC] hover:bg-white font-semibold flex justify-center items-center border text-white bg-[#00C4CC] cursor-pointer transition-colors ease-in-out rounded-md'><FaPhone className='mr-1.5' /> Get in Touch</button>
+                        <button  onClick={() => window.open('tel:+601124419414')} className='px-3 py-2 hover:text-[#00C4CC] hover:bg-white font-semibold flex justify-center items-center border text-white bg-[#00C4CC] cursor-pointer transition-colors ease-in-out rounded-md'><FaPhone className='mr-1.5' /> Get in Touch</button>
                     </div>
 
 

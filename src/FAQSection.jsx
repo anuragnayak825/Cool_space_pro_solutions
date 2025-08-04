@@ -19,11 +19,11 @@ export default function FAQSection() {
 
     return (
         <div className="w-full px-5 lg:px-20 py-16 bg-white">
-            <h2 className="text-3xl italic tracking-wide font-bold mb-8 text-gray-800 text-left">Frequently Asked Questions</h2>
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8  ">
+            <h2 className="text-3xl italic tracking-wide font-bold mb-10  text-gray-800 text-left">Frequently Asked Questions</h2>
+            <div className="w-full  grid grid-cols-1 md:grid-cols-3 gap-8   ">
                 {/* FAQ List */}
                 <div className="md:col-span-2">
-                    <div className="space-y-5">
+                    <div className="space-y-5 ">
                         {faqData.map((item, index) => (
                             <div
                                 key={index}

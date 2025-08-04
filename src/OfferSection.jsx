@@ -16,8 +16,8 @@ export default function OfferSection() {
                     From top-tier air conditioning to luxurious renovations — we bring expertise, elegance, and efficiency to every project. No hidden costs, just real transformation.
                 </p>
 
-                <button   onClick={() => window.open('https://wa.me/919999999999', '_blank')} className="mt-8 cursor-pointer w-max px-6 py-3 mx-auto bg-green-600 text-white font-semibold rounded-lg flex items-center gap-2 hover:bg-green-700 transition-all duration-300">
-                    <FaWhatsapp /> Chat on WhatsApp
+                <button   onClick={() => window.open('https://wa.me/+601124419414', '_blank')} className="mt-8 animate-bounce cursor-pointer text-lg w-max px-6 py-3 mx-auto bg-green-600 text-white font-semibold rounded-lg flex items-center gap-2 hover:bg-green-700 transition-all duration-300">
+                    <FaWhatsapp className='text-2xl font-bold'/> Chat on WhatsApp
                 </button>
             </div>
 

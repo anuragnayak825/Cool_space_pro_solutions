@@ -16,46 +16,46 @@ import { AuthContext } from './Auth/Authprovider';
 
 const services = [
     {
-        title: 'Aircond Service & Cleaning',
+        title: 'Aircond Service ',
         desc: 'Keep your air conditioners running smoothly with our expert cleaning and servicing packages. Regular maintenance extends lifespan and boosts efficiency.',
         icon: icon2,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-2.jpg',
-        path: '/aircon/cleaning',
+        path: '/service',
     },
     {
-        title: 'Wall-Mounted Service',
+        title: 'Aircon Repair',
         desc: 'Efficient cooling and reliable maintenance for wall-mounted AC units. Ideal for residential and small office spaces that require quiet and steady performance.',
         icon: icon5,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-6.jpg',
-        path: '/aircon/wall-mounted',
+        path: '/repair',
     },
     {
-        title: 'Cassette Service',
+        title: 'Aircon Maintenance',
         desc: 'Professional cassette AC services for top-notch performance. Designed for open spaces like offices or shops, ensuring even air distribution and maximum comfort.',
         icon: icon5,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-3.jpg',
-        path: '/aircon/cassette-service',
+        path: '/maintenace',
     },
     {
         title: 'Duct Cleaning',
         desc: 'Thorough duct cleaning to enhance indoor air quality. Eliminate dust, allergens, and mold from your ventilation system for a healthier living environment.',
         icon: icon4,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-4.jpg',
-        path: '/aircon/duct-cleaning',
+        path: '/duct-cleaning',
     },
     {
         title: 'Water Leaking Service',
         desc: 'Quick and effective solutions for AC water leakage problems. Prevent further damage and ensure optimal unit performance.',
         icon: icon3,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-5.jpg',
-        path: '/aircon/water-leaking-service',
+        path: '/water-leaking-service',
     },
     {
         title: 'Aircon Installation',
         desc: 'Professional AC installation services for homes and offices. Ensuring correct setup for long-term efficiency and performance.',
         icon: icon1,
         img: 'https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/service-img-1.jpg',
-        path: '/aircon/air-installation',
+        path: '/air-installation',
     },
 ];
 

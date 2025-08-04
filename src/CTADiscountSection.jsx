@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa6';
-import { NavLink } from 'react-router-dom';
 
 export default function GradientCTABanner() {
     return (
@@ -16,23 +15,25 @@ export default function GradientCTABanner() {
             {/* Centered Content */}
             <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 md:px-10 text-white text-center space-y-4">
                 <h2 className="text-2xl md:text-5xl font-bold leading-tight">
-                    Take The First Step Toward  Transforming Your Home.
+                    Take The First Step Toward Transforming Your Home.
                 </h2>
                 <p className="text-base md:text-xl text-gray-200 max-w-3xl">
                     Stay cool and comfortable all year round. Our expert aircon services ensure your system runs efficiently with top-quality maintenance, repair, and installation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-4">
                     <button
-                        onClick={() => window.open('tel:+919999999999')}
-                        className="inline-flex items-center justify-center gap-2 bg-blue-700 cursor-pointer text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-800 transition shadow"
+                        onClick={() => window.open('tel:+601124419414')}
+                        className="group inline-flex items-center justify-center gap-2 bg-blue-700 cursor-pointer text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-800 transition shadow"
                     >
-                        → Speak to a Specialist
+                        <span className="wave-text">→ Speak to a Specialist</span>
                     </button>
+
                     <button
-                        onClick={() => window.open('https://wa.me/919999999999', '_blank')}
-                        className="inline-flex items-center justify-center gap-2 bg-green-700 cursor-pointer text-white font-semibold px-6 py-3 rounded-md hover:bg-green-800 transition"
+                        onClick={() => window.open('https://wa.me/+601124419414', '_blank')}
+                        className="group inline-flex items-center justify-center gap-2 bg-green-700 cursor-pointer text-white font-semibold px-6 py-3 rounded-md hover:bg-green-800 transition"
                     >
-                        <FaWhatsapp className='text-xl' /> Let’s Talk on WhatsApp
+                        <FaWhatsapp className="text-xl" />
+                        <span className="wave-text">Let’s Talk on WhatsApp</span>
                     </button>
                 </div>
             </div>

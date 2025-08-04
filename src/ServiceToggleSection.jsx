@@ -62,7 +62,7 @@ export default function ServiceToggleSection() {
                                 {service.description}
                             </p>
                             <div className='flex flex-wrap gap-3 mt-auto'>
-                                <button onClick={()=> window.location.href = 'tel:+918287039634'} className='bg-[#00C4CC] hover:bg-[#00aab1] text-white px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-md'>
+                                <button onClick={()=> window.location.href = 'tel:+601124419414'} className='bg-[#00C4CC] hover:bg-[#00aab1] text-white px-5 py-2 rounded-full text-sm font-semibold flex items-center gap-2 shadow-md'>
                                     Talk to Us <FaArrowRight className='text-xs' />
                                 </button>
                                 <NavLink

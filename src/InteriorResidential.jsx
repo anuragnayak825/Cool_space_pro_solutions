@@ -3,6 +3,9 @@ import Layout from './Layout/Layout'
 import { FaRightLong } from 'react-icons/fa6'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
+import video from './assets/2474849_Furniture_Modern_1920x1080.mp4'
+import GradientCTABanner from './CTADiscountSection'
+
 const Service = [
     {
         id: 1,
@@ -53,8 +56,17 @@ export default function InteriorResidential() {
     return (
         <Layout>
             {/* Banner */}
-            <div className="w-full h-[60vh] bg-no-repeat bg-center bg-cover bg-fixed relative bg-[url('https://demo2.themelexus.com/antra/wp-content/uploads/2025/06/breadcrumb-df.jpg')]">
-                <div className="absolute inset-0 w-full h-full bg-[#100801a8] flex flex-col justify-center items-center space-y-4 text-center px-4">
+            <div className="w-full h-screen relative overflow-hidden">
+                <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="absolute w-full h-full object-cover z-0"
+                    src={video} // 🔁 Replace with your video link
+                ></video>
+
+                <div className="absolute inset-0 w-full h-full font-sans bg-[#10080170] flex flex-col justify-center items-center space-y-4 text-center px-4 z-10">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white">
                         Interior Design
                     </h1>
@@ -65,7 +77,7 @@ export default function InteriorResidential() {
             </div>
 
             {/* Services Intro Section */}
-            <div className="w-full bg-white relative py-10 px-4 sm:px-6 lg:px-20 overflow-hidden">
+            <div className="w-full bg-gray-50 relative py-10 px-4 sm:px-6 lg:px-20 overflow-hidden">
                 {/* Decorative Lines */}
                 <div className="absolute top-10 right-0 md:left-0 w-[40%] h-[50%] lg:block z-0">
                     <motion.div
@@ -86,7 +98,7 @@ export default function InteriorResidential() {
                     </div>
 
                     <div className="w-full lg:w-3/4">
-                        <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight text-black">
+                        <h2 className="text-3xl sm:text-4xl lg:text-6xl font-sans font-bold leading-tight text-black">
                             Explore Our <span className="text-[#00C4CC]">Comprehensive</span><br />
                             <span className="text-[#00C4CC]">Interior Design</span> <span className="text-black">Services</span>
                         </h2>
@@ -99,23 +111,26 @@ export default function InteriorResidential() {
             </div>
 
             {/* Service Cards */}
-            <div className="w-full h-auto px-4 sm:px-6 lg:px-12 py-6">
+            <div className="w-full h-auto px-4 sm:px-6 lg:px-12 py-6 bg-gray-50">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
                     {
                         Service.map((item, i) => (
-                            <div
-                                key={i}
-                                className="relative group bg-white rounded-3xl overflow-hidden shadow-md min-h-[450px] sm:min-h-[500px] lg:min-h-[600px]"
-                            >
-                                <img
-                                    src={item?.img}
-                                    alt={item?.title}
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 ease-in-out"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#00000080] to-[#00000001]" />
-                                <div className="absolute bottom-0 left-0 w-full px-6 sm:px-8 py-6 sm:py-8 space-y-3.5">
-                                    <h1 className="text-white font-bold text-xl sm:text-2xl md:text-3xl">{item?.title}</h1>
-                                    <p className="text-white text-sm sm:text-base md:text-lg font-medium">{item?.des}</p>
+                            <div className='flex flex-col'>
+                                <div
+                                    key={i}
+                                    className="relative group rounded-md bg overflow-hidden shadow-md min-h-[450px] sm:min-h-[500px] lg:min-h-[600px]"
+                                >
+                                    <img
+                                        src={item?.img}
+                                        alt={item?.title}
+                                        className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500 ease-in-out"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#00000080] to-[#00000001]" />
+                                </div>
+
+                                <div className="w-full py-5 space-y-2.5">
+                                    <h1 className="font-bold text-xl sm:text-2xl md:text-3xl text-center font-serif">{item?.title}</h1>
+                                    <p className="text-sm sm:text-base md:text-lg font-medium text-center font-serif text-gray-600">{item?.des}</p>
                                 </div>
                             </div>
                         ))
@@ -124,7 +139,7 @@ export default function InteriorResidential() {
             </div>
 
             {/* Contact Section */}
-            <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-10 relative px-4 sm:px-8 md:px-12 lg:px-20 py-20">
+            <div className="w-full flex bg-gray-50 flex-col lg:flex-row items-center justify-between gap-10 relative px-4 sm:px-8 md:px-12 lg:px-20 py-20">
                 {/* Form Side */}
                 <div className="w-full lg:w-1/2 space-y-6 z-10">
                     <div className="flex space-x-2 items-center text-base md:text-lg font-semibold text-[#00C4CC] italic">
@@ -188,6 +203,7 @@ export default function InteriorResidential() {
                     className="hidden sm:block absolute bottom-0 left-0 transform -scale-x-100 "
                 />
             </div>
+            <GradientCTABanner/>
         </Layout>
     );
 }

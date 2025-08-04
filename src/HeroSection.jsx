@@ -46,14 +46,14 @@ export default function HeroSection() {
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-4 sm:px-6 md:px-12 xl:px-20 py-10 gap-8 min-h-screen">
         {/* Animated Left Text */}
         <motion.div
-          className="text-white text-center lg:text-left max-w-3xl space-y-7"
+          className="text-white text-center lg:text-left max-w-3xl space-y-10"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
           <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-extrabold leading-tight drop-shadow-lg">
-            Redefining Homes with Comfort, Style, and Smart Cooling
+            Transforming Living Spaces with Style, Innovation, and Ultimate Cooling Comfort
           </h1>
           <p className="mt-4 text-base sm:text-lg md:text-xl font-medium drop-shadow-md">
             We provide complete end-to-end solutions for modern living — from reliable air conditioning services to elegant interior design and flawless home renovations.
