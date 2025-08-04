@@ -14,8 +14,9 @@ import Exterior_Renovations from './Homerenovation/exterior_renovations';
 import Basement_Finishing from './Homerenovation/basement_finishing';
 import Whole_Home_Renovations from './Homerenovation/Whole_ome_Renovations';
 import Interior_Remodeling from './Homerenovation/interior_remodeling';
+import PrivacyPolicy from './PrivacyPolicy';
 
-// import HomeRenovation from './HomeRenovation';
+
 
 const Home = lazy(() => import("./page/Home"));
 const About = lazy(() => import("./page/About"));
@@ -69,7 +70,8 @@ function App() {
           <Route path='/interior-remodeling' element={<Interior_Remodeling />} />
 
 
-          <Route path='/contact-us' element={<ContactUs />} />
+          <Route path='/contact-us' element={<ContactUs />} /> 
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} /> 
           <Route path='/gallery' element={<Gallery />} />
         </Routes>
       </Suspense>

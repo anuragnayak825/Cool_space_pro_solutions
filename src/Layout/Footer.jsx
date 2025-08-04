@@ -67,7 +67,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center">
                                 <FaCaretRight className="mr-2" />
-                                <NavLink to={'#'} className="hover:underline">Privacy Policy</NavLink>
+                                <NavLink to={'/privacy-policy'} className="hover:underline">Privacy Policy</NavLink>
                             </li>
                         </ul>
 
