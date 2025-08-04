@@ -8,7 +8,7 @@ import StickyCallWhatsappButton from './StickyCallWhatsappButton';
 import ContactFormPopup from './ContactFormPopup';
 import Residential from './Residential';
 import Commercial from './Commercial';
-import Kitchen_Remodeling from './Homerenovation/kitchen_remodeling';
+import Kitchen_Remodeling from './Homerenovation/Kitchen_Remodeling';
 import Bathroom_Renovations from './Homerenovation/bathroom_renovations';
 import Exterior_Renovations from './Homerenovation/exterior_renovations';
 import Basement_Finishing from './Homerenovation/basement_finishing';
