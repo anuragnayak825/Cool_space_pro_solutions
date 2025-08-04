@@ -9,11 +9,11 @@ import ContactFormPopup from './ContactFormPopup';
 import Residential from './Residential';
 import Commercial from './Commercial';
 import Kitchen_Remodeling from './Homerenovation/Kitchen_Remodeling';
-import Bathroom_Renovations from './Homerenovation/bathroom_renovations';
-import Exterior_Renovations from './Homerenovation/exterior_renovations';
-import Basement_Finishing from './Homerenovation/basement_finishing';
+import Bathroom_Renovations from './Homerenovation/bathroom_Renovations';
+import Exterior_Renovations from './Homerenovation/exterior_Renovations';
+import Basement_Finishing from './Homerenovation/basement_Finishing';
 import Whole_Home_Renovations from './Homerenovation/Whole_ome_Renovations';
-import Interior_Remodeling from './Homerenovation/interior_remodeling';
+import Interior_Remodeling from './Homerenovation/interior_Remodeling';
 import PrivacyPolicy from './PrivacyPolicy';
 
 

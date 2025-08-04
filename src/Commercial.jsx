@@ -75,7 +75,7 @@ export default function Commercial() {
             {/* How We Deliver Comfort */}
             <section className='w-full h-auto px-4 md:px-10 lg:px-20 py-10 flex flex-col lg:flex-row justify-between items-start gap-10'>
                 <div className='w-full lg:w-1/2'>
-                    <h1 className='text-3xl md:text-4xl text-blue-950 italic font-bold uppercase mb-6'>How We Deliver Comfort</h1>
+                    <h1 className='text-3xl wbhjjcb sjkdbhbvdh  md:text-4xl text-blue-950 italic font-bold uppercase mb-6'>How We Deliver Comfort</h1>
                     <hr className='w-20 h-1 border border-blue-800 bg-blue-800' />
                     <p className='text-gray-500 mt-6 text-base md:text-lg   font-semibold max-w-2xl'>
                         At Aircon Hero, we specialize in creating indoor environments that boost productivity and comfort. We know how essential it is to maintain the right temperature for both your team and your customers — because a comfortable space leads to better work, happier visitors, and smoother operations.
