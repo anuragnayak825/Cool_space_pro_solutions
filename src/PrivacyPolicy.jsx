@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "./Layout/Layout";
 import { motion } from "framer-motion";
 
 export default function PrivacyPolicy() {
+     useEffect(() => {
+            window.scrollTo(0, 0);
+        }, []);
   return (
     <Layout>
       <div className="w-full min-h-screen bg-white text-gray-800 py-16 px-6 sm:px-10 md:px-20 lg:px-20 italic xl:px-20">
