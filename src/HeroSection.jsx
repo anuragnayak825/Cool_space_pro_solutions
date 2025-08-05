@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -6,6 +6,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+import { IoMdArrowDropdown } from "react-icons/io";
 import heroImage from './assets/hero.webp';
 import heroImage2 from './assets/hero_img_2.webp';
 import heroImage3 from './assets/hero_img_3.webp';
@@ -15,6 +18,20 @@ import { NavLink } from "react-router-dom";
 const images = [heroImage, heroImage2, heroImage3];
 
 export default function HeroSection() {
+  const [isShow, setIsShow] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsShow(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
   return (
     <section className="relative w-full overflow-x-hidden">
       {/* Background Slider */}
@@ -84,7 +101,6 @@ export default function HeroSection() {
           {[
             { id: "name", type: "text", label: "Your Name" },
             { id: "email", type: "email", label: "Email Address" },
-            { id: "phone", type: "tel", label: "Phone Number" },
           ].map(({ id, type, label }) => (
             <div className="relative w-full" key={id}>
               <input
@@ -104,6 +120,54 @@ export default function HeroSection() {
               </label>
             </div>
           ))}
+          <label></label>
+          <div
+            className="w-full h-12 relative flex shadow-sm rounded-md"
+            ref={dropdownRef}
+          >
+            {/* Flag + Dropdown toggle */}
+            <div className="w-16 h-12 border-2 border-gray-300 border-e-0 rounded-s-md flex justify-center items-center bg-gray-100 ">
+              <img
+                src="https://flagcdn.com/w40/my.png"
+                alt="Malaysia Flag"
+                className="w-6 h-4"
+              />
+              <IoMdArrowDropdown
+                onClick={() => setIsShow(!isShow)}
+                className={`cursor-pointer transition-transform ${isShow ? 'rotate-180' : ''}`}
+              />
+            </div>
+
+            {/* Dropdown */}
+            {isShow && (
+              <div className="w-60 absolute top-14 z-10 left-0 border border-gray-300 bg-white shadow rounded-md">
+                <div className="bg-gray-100  w-full h-12 flex justify-between items-center rounded-md">
+                  <div className="flex items-center px-2 space-x-3 ">
+                    <img
+                      src="https://flagcdn.com/w40/my.png"
+                      alt="Malaysia Flag"
+                      className="w-6 h-4"
+                    />
+                    <span className="text-gray-600 font-semibold">Malaysia</span>
+                    <span className="text-gray-600 font-semibold">+60</span>
+                  </div>
+                  <div className="w-5 h-12 flex bg-white flex-col justify-between items-center rounded-e-md">
+                    <IoMdArrowDropdown className="rotate-180" />
+                    <IoMdArrowDropdown />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Phone input */}
+            <div className="w-full">
+              <input
+                type="tel"
+                placeholder="012-345 6789"
+                className="peer h-12 w-full border-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-e-md px-4"
+              />
+            </div>
+          </div>
           {/* Message */}
           <div className="relative w-full">
             <select
