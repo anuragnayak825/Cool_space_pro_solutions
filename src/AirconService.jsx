@@ -35,24 +35,7 @@ export default function AirconService() {
             Home <FaRightLong className="text-sm sm:text-base" /> Aircon Service
           </div>
 
-          <motion.h1
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg sm:text-xl font-semibold text-white tracking-wider italic max-w-full break-words mt-2"
-          >
-            Efficient Solutions for Your Cooling Needs
-          </motion.h1>
-
-          <motion.p
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="max-w-3xl border-s-4 border-s-sky-400 px-4 sm:px-6 text-sm sm:text-base md:text-lg font-normal text-white tracking-wider break-words mt-3"
-          >
-            We provide professional air conditioning services that ensure your unit runs smoothly throughout the year.
-            Whether it’s installation, regular maintenance, or emergency repairs, we’ve got you covered.
-          </motion.p>
+         
         </div>
       </div>
 
@@ -99,7 +82,7 @@ export default function AirconService() {
               <div className="bg-gray-100 w-12 h-12 flex justify-center items-center rounded-full shadow">
                 <FaVoicemail className="text-blue-700 text-xl" />
               </div>
-              <p className="font-semibold text-lg">example@gmail.com</p>
+              <p className="font-semibold text-lg">coolspaceprosolution@gmail.com</p>
             </div>
           </div>
         </motion.div>

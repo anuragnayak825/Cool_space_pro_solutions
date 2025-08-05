@@ -51,7 +51,7 @@ export default function ContactUs() {
           </div>
           <h2 className="text-2xl font-semibold italic tracking-wider">Email</h2>
           <p className="text-base font-medium text-gray-600 text-center">
-            exmaple@gmail.com
+            coolspaceprosolution@gmail.com
           </p>
         </div>
       </div>

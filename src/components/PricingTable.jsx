@@ -73,22 +73,51 @@ const pricingData = [
 ];
 
 const PricingCard = ({ title, services, gasRefill, additionalBenefits }) => {
-    return (
-        <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 hover:shadow-2xl transition duration-300 border border-gray-200">
-            <h2 className="text-xl sm:text-2xl font-semibold text-blue-700 mb-6">{title}</h2>
+    const isGeneralCleaning = title === 'General Cleaning (Up to 2.5hp)';
 
-            <div className="mb-6 space-y-4">
+    return (
+        <div
+            className={`rounded-2xl p-6 sm:p-8 transition duration-300 border 
+                ${isGeneralCleaning
+                    ? 'bg-white border-gray-200 shadow-xl hover:shadow-2xl'
+                    : 'bg-white border-gray-200 shadow-xl hover:shadow-2xl'}
+            `}
+        >
+            <h2 className={`text-xl sm:text-2xl font-semibold mb-6 
+                ${isGeneralCleaning ? 'text-blue-700' : 'text-blue-700'}
+            `}>
+                {title}
+            </h2>
+
+            <div className={`mb-6  ${isGeneralCleaning ? '  grid grid-cols-3 gap-5'
+                : "space-y-4 "}`}>
                 {services?.map((service, index) => (
-                    <div key={index} className="flex justify-between items-start gap-4 bg-gray-50 rounded-md px-4 py-3 border border-gray-100 shadow-sm">
-                        <div>
-                            <h3 className="text-base sm:text-lg font-semibold text-teal-600">{service.name}</h3>
-                            {service.description && <p className="text-sm text-gray-500">{service.description}</p>}
+                    <div
+                        key={index}
+                        className={` rounded-md px-4 py-3 border shadow-sm 
+                            ${isGeneralCleaning
+                                ? 'bg-white border-green-100 text-center'
+                                : 'bg-gray-50 border-gray-100 flex justify-between items-start gap-4'}
+                        `}
+                    >
+                        <div className=' '>
+                            <h3
+                                className={`text-base sm:text-lg font-semibold 
+                                    ${isGeneralCleaning ? 'text-green-700' : 'text-teal-600'}
+                                `}
+                            >
+                                {service.name}
+                            </h3>
+                            {service.description && (
+                                <p className="text-sm text-gray-500">{service.description}</p>
+                            )}
                         </div>
                         <p className="text-sm sm:text-base text-gray-700">{service.price}</p>
                     </div>
                 ))}
             </div>
 
+            {/* Leave gasRefill and additionalBenefits unchanged */}
             {gasRefill && (
                 <div className="mb-6">
                     <h3 className="text-base sm:text-lg font-semibold text-teal-600 mb-3">Gas Refill (Up to 1.0hp)</h3>
@@ -103,6 +132,7 @@ const PricingCard = ({ title, services, gasRefill, additionalBenefits }) => {
                 </div>
             )}
 
+
             {additionalBenefits && (
                 <div>
                     <h3 className="text-base sm:text-lg font-semibold text-teal-600 mb-2">Additional Benefits</h3>
@@ -116,6 +146,7 @@ const PricingCard = ({ title, services, gasRefill, additionalBenefits }) => {
         </div>
     );
 };
+
 
 const PricingTable = () => {
     return (

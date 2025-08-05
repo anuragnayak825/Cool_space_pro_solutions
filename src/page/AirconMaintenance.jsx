@@ -22,12 +22,6 @@ export default function AirconMaintenance() {
                     <div className="flex items-center gap-3 text-white text-sm sm:text-lg">
                         Home <FaRightLong className="text-sm sm:text-base" /> Aircon Maintenance
                     </div>
-                    <h1 className='text-lg md:text-xl font-semibold text-white tracking-wider italic'>
-                        Efficient Solutions for Your Cooling Needs
-                    </h1>
-                    <p className='max-w-3xl border-s-4 border-s-sky-400 px-4 sm:px-6 text-sm sm:text-base md:text-lg text-white tracking-wider'>
-                        We provide professional air conditioning services that ensure your unit runs smoothly throughout the year. Whether it’s installation, regular maintenance, or emergency repairs, we’ve got you covered.
-                    </p>
                 </div>
             </div>
 
@@ -77,7 +71,7 @@ export default function AirconMaintenance() {
                             <div className="bg-gray-100 w-10 h-10 md:w-12 md:h-12 flex justify-center items-center rounded-full shadow-sm">
                                 <FaVoicemail className="text-blue-700 text-lg md:text-xl" />
                             </div>
-                            <p className="font-semibold text-sm md:text-base lg:text-xl">example@gmail.com</p>
+                            <p className="font-semibold text-sm md:text-base lg:text-xl">coolspaceprosolution@gmail.com</p>
                         </div>
                     </div>
                 </motion.div>

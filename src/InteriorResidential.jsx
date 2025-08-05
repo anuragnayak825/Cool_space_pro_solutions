@@ -152,7 +152,7 @@ export default function InteriorResidential() {
             </div>
 
             {/* Contact Section */}
-            <div className="w-full flex bg-gray-50 flex-col lg:flex-row items-center justify-between gap-10 relative px-4 sm:px-8 md:px-12 lg:px-20 py-20">
+            <div className="w-full flex bg-gray-50 flex-col lg:flex-row items-center overflow-hidden justify-between gap-10 relative px-4 sm:px-8 md:px-12 lg:px-20 py-20">
                 {/* Form Side */}
                 <motion.div
                     variants={contentVariants}

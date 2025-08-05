@@ -93,14 +93,22 @@ export default function Footer() {
                     </div>
 
                     {/* Contact Info */}
-                    <div>
+                    <ul className="space-y-3 text-white text-base italic">
                         <h3 className="text-xl font-semibold tracking-wider mb-4">Contact Details</h3>
-                        <ul className="space-y-3 text-lg text-white italic">
-                            <li className='flex items-center'><FaPhone className='mr-3 text-xl' /> <a to={''}>+60 11-2441 9414</a></li>
-                            <li className='flex items-center'><MdEmail className='mr-3 text-xl' /> <a to={''}>example@gmail.com</a></li>
-                            <li className='flex items-center'><FaLocationDot className='mr-3 text-xl' /> <a to={''}>Kuala Lumpur</a></li>
-                        </ul>
-                    </div>
+                        <li className="flex items-start gap-3 flex-wrap">
+                            <FaPhone className="text-lg mt-1 shrink-0" />
+                            <a href="tel:+601124419414" className="break-words">+60 11-2441 9414</a>
+                        </li>
+                        <li className="flex items-start gap-3 flex-wrap">
+                            <MdEmail className="text-lg mt-1 shrink-0" />
+                            <a href="mailto:coolspaceprosolution@gmail.com" className="break-words">coolspaceprosolution@gmail.com</a>
+                        </li>
+                        <li className="flex items-start gap-3 flex-wrap">
+                            <FaLocationDot className="text-lg mt-1 shrink-0" />
+                            <span>Kuala Lumpur</span>
+                        </li>
+                    </ul>
+
                 </div>
 
                 {/* Bottom Footer */}
