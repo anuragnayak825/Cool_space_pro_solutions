@@ -19,9 +19,30 @@ const images = [heroImage, heroImage2, heroImage3];
 
 export default function HeroSection() {
   const [isShow, setIsShow] = useState(false);
+  const [phone, setPhone] = useState('');
   const dropdownRef = useRef(null);
 
-  // Close on outside click
+
+  const formatPhone = (value) => {
+    const digits = value.replace(/\D/g, '').slice(0, 10); // max 10 digits
+    const match = digits.match(/^(\d{3})(\d{3})(\d{0,4})$/);
+    if (match) {
+      return `${match[1]}-${match[2]} ${match[3]}`.trim();
+    } else if (digits.length <= 6) {
+      return digits.replace(/^(\d{3})(\d{0,3})$/, '$1-$2').trim();
+    }
+    return digits;
+  };
+
+  const handlePhoneChange = (e) => {
+    const input = e.target.value;
+    const formatted = formatPhone(input);
+    setPhone(formatted);
+  };
+
+  const handleClearInput = () => {
+    setPhone(''); // Clear the state completely
+  };
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -163,8 +184,11 @@ export default function HeroSection() {
             <div className="w-full">
               <input
                 type="tel"
+                value={phone}
+                onChange={handlePhoneChange}
+                 onClick={handleClearInput}
                 placeholder="012-345 6789"
-                className="peer h-12 w-full border-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-e-md px-4"
+                className=" h-12 w-full border-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600 rounded-e-md px-4"
               />
             </div>
           </div>
