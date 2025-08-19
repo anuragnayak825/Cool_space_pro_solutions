@@ -48,7 +48,7 @@ export default function ServiceHighlightsSection() {
 
                 {/* HOME RENOVATION */}
                 <div className=" p-6 md:px-10 md:py-5 ">
-                    <div className="flex relative justify-self-start items-center  text-white py-1.5 px-1.5 rounded  mb-4">
+                    <div className="flex relative justify-self-start items-center  py-1.5 px-1.5 rounded  mb-4">
                         <FaHammer size={28} className="mr-3" />
                         <h2 className="text-lg md:text-3xl font-bold">Complete Home Renovation Solutions</h2>
                         <div className="absolute left-0 -bottom-2 w-full h-[4px] bg-gradient-to-r from-blue-600 to-transparent rounded-full"></div>

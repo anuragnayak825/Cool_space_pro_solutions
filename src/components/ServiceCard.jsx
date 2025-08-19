@@ -32,6 +32,12 @@ const services = [
     bg: 'bg-indigo-500',
     desc: 'We clean and unclog your AC drain line to prevent leaks, water damage, and mold buildup.',
   },
+  {
+    title: 'Coil & Fin Cleaning',
+    icon: <FaSyncAlt className="text-white text-xl" />,
+    bg: 'bg-indigo-500',
+    desc: 'We clean and unclog your AC drain line to prevent leaks, water damage, and mold buildup.',
+  },
 ];
 
 const ServiceCards = () => {

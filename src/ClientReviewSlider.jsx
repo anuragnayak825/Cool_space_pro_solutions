@@ -32,7 +32,7 @@ const reviews = [
 
 export default function ClientReviewSlider() {
     return (
-        <section className="w-full py-5 bg-gradient-to-b from-white via-sky-50 to-white px-4 md:px-20">
+        <section className="w-full py- bg-gradient-to-b from-white via-sky-50 to-white px-4 md:px-20">
             <div className='max-w-[250px] relative border-[3px] mx-auto flex justify-center items-center border-[#00C4CC] px-4 py-3 mb-16'>
                 <span className='font-bold text-base sm:text-lg md:text-xl tracking-wide absolute -top-4 bg-white px-4 italic'>
                     Client Reviews
@@ -48,10 +48,11 @@ export default function ClientReviewSlider() {
                     768: { slidesPerView: 1 },
                     1024: { slidesPerView: 2 },
                 }}
+                className="pb-12" // Add padding to push dots downward
             >
                 {reviews.map((review, idx) => (
                     <SwiperSlide key={idx}>
-                        <div className="bg-white  shadow-lg rounded-md p-8 m-4 h-full flex flex-col justify-between">
+                        <div className="bg-white shadow-lg rounded-md p-8 m-4 h-full flex flex-col justify-between">
                             <FaQuoteLeft className="text-4xl text-blue-600 mb-4" />
                             <p className="text-gray-700 text-lg mb-6 italic">"{review.feedback}"</p>
                             <div className="mt-auto">
@@ -67,6 +68,7 @@ export default function ClientReviewSlider() {
                     </SwiperSlide>
                 ))}
             </Swiper>
+
         </section>
     );
 }

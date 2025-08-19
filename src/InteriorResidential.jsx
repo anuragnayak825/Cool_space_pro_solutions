@@ -59,7 +59,7 @@ export default function InteriorResidential() {
     return (
         <Layout>
             {/* Banner */}
-            <div className="w-full h-screen relative overflow-hidden">
+            <div className="w-full h-[40vh] md:h-screen relative overflow-hidden">
                 <video
                     autoPlay
                     muted

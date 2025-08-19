@@ -205,4 +205,10 @@
   display: inline-block;
 }
 
+/* Add this to your global CSS or inside a style tag */
+.swiper-pagination {
+    margin-top: 20px !important;
+    position: relative !important;
+}
+
 

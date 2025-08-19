@@ -77,10 +77,10 @@ const PricingCard = ({ title, services, gasRefill, additionalBenefits }) => {
 
     return (
         <div
-            className={`rounded-2xl p-6 sm:p-8 transition duration-300 border 
+            className={`rounded-md p-6 sm:p-8 transition duration-300 border 
                 ${isGeneralCleaning
-                    ? 'bg-white border-gray-200 shadow-xl hover:shadow-2xl'
-                    : 'bg-white border-gray-200 shadow-xl hover:shadow-2xl'}
+                    ? 'bg-white border-gray-200 shadow-md '
+                    : 'bg-white border-gray-200 shadow-md '}
             `}
         >
             <h2 className={`text-xl sm:text-2xl font-semibold mb-6 
@@ -94,10 +94,10 @@ const PricingCard = ({ title, services, gasRefill, additionalBenefits }) => {
                 {services?.map((service, index) => (
                     <div
                         key={index}
-                        className={` rounded-md px-4 py-3 border shadow-sm 
+                        className={` rounded-e-md px-4 py-3 
                             ${isGeneralCleaning
-                                ? 'bg-white border-green-100 text-center'
-                                : 'bg-gray-50 border-gray-100 flex justify-between items-start gap-4'}
+                                ? 'bg-white border border-gray-300 text-center rounded-md shadow-inner'
+                                : 'bg-white border-s-4 border-s-emerald-600 flex justify-between items-start gap-4 shadow-md'}
                         `}
                     >
                         <div className=' '>
@@ -155,7 +155,7 @@ const PricingTable = () => {
                 Our Aircon Services Pricing
             </h1>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 ">
                 {pricingData.map((data, index) => (
                     <PricingCard
                         key={index}

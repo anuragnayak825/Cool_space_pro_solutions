@@ -17,7 +17,7 @@ export default function Aboutsection2() {
                     {/* Floating Image Card */}
                     <div className='w-40 sm:w-48 md:w-56 bg-white absolute h-[130px] sm:h-[160px] md:h-[200px] border-[6px] md:rounded-xl border-white bottom-6 right-0 sm:-right-12 md:-right-16 transition-transform duration-300 hover:-translate-y-2.5'>
                         <img
-                            src="https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695787.jpg?t=st=1752839013~exp=1752842613~hmac=8fc27dd577c12c20b5f3dd925ccf29c61163f10266d12a9b231dd503b3a7ee65&w=996"
+                            src="https://img.freepik.com/free-photo/modern-styled-entryway_23-2150695915.jpg?uid=P136526711&ga=GA1.1.2112137625.1747906340&semt=ais_incoming&w=740&q=80"
                             alt=""
                             className='w-full h-full object-cover rounded-xl'
                         />
@@ -62,7 +62,7 @@ export default function Aboutsection2() {
                     </p>
 
 
-                    <div className='w-full h-auto flex  items-center gap-5 '>
+                    <div className='w-full h-auto flex sm:justify-start justify-center items-center gap-5 '>
                         <NavLink to={'/contact-us'} className='px-3 py-2 text-[#00C4CC] font-semibold flex justify-center items-center border hover:text-white hover:bg-[#00C4CC] cursor-pointer transition-colors ease-in-out rounded-md'>Book Now <FaArrowRightLong className='ml-1.5' /></NavLink>
                         <button  onClick={() => window.open('tel:+601124419414')} className='px-3 py-2 hover:text-[#00C4CC] hover:bg-white font-semibold flex justify-center items-center border text-white bg-[#00C4CC] cursor-pointer transition-colors ease-in-out rounded-md'><FaPhone className='mr-1.5' /> Get in Touch</button>
                     </div>

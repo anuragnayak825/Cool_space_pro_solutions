@@ -38,7 +38,7 @@ export default function QuotationForm() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
   return (
-    <form className="w-full max-w-2xl mx-auto border border-gray-300 bg-white px-4 py-6 sm:px-6 md:px-8 rounded-md shadow-xl shadow-gray-300 space-y-6">
+    <form className="w-full max-w-md mx-auto border border-gray-300 bg-white px-4 py-6 sm:px-6 md:px-8 rounded-md shadow-xl shadow-gray-300 space-y-6">
       <h1 className="text-center text-2xl font-bold text-gray-800">Get a Quotation Now</h1>
 
       {/* Name */}

@@ -104,7 +104,7 @@ export default function HeroSection() {
               </NavLink>
             ))}
           </div>
-          <button onClick={() => { window.location.href = '#servic' }} className="mt-6 px-6 py-3 text-white border border-white rounded hover:bg-[#004A7F] transition flex justify-center items-center">
+          <button onClick={() => { window.location.href = '#servic' }} className="mt-6 px-6 py-3 mx-auto lg:mx-0 text-white border border-white rounded hover:bg-[#004A7F] transition flex justify-center items-center">
             Explore Our Services <FaArrowRightLong className="text-xl ml-2.5" />
           </button>
         </motion.div>
