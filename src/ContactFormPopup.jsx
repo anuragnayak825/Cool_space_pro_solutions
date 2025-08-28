@@ -76,12 +76,20 @@ export default function ContactFormPopup() {
                   style={{ boxShadow: 'inset 3px 3px 6px #ccc, inset -3px -3px 6px #fff' }}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00C4CC]"
                 />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  style={{ boxShadow: 'inset 3px 3px 6px #ccc, inset -3px -3px 6px #fff' }}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00C4CC]"
-                />
+                <div className="relative w-full">
+                  <img
+                    src="https://flagcdn.com/w20/my.png" // Malaysia flag image
+                    alt="MY"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-6 h-4"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="012-345 6789"
+                    style={{ boxShadow: 'inset 3px 3px 6px #ccc, inset -3px -3px 6px #fff' }}
+                    className="pl-12 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00C4CC]"
+                  />
+                </div>
+
                 <input
                   type="email"
                   placeholder="Email Address"
@@ -102,7 +110,7 @@ export default function ContactFormPopup() {
                 />
                 <button
                   type="submit"
-                  
+
                   className="w-full bg-[#00C4CC] hover:bg-[#009da3] text-white py-3 rounded-lg font-semibold"
                 >
                   Submit

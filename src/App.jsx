@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useState ,useEffect } from 'react';
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Loader from './Loader';
@@ -15,7 +15,9 @@ import Basement_Finishing from './Homerenovation/Basement_Finishing';
 import Whole_Home_Renovations from './Homerenovation/Whole_ome_Renovations';
 import Interior_Remodeling from './Homerenovation/Interior_Remodeling';
 import PrivacyPolicy from './PrivacyPolicy';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import ThankYoupage from './page/ThankYoupage';
 
 
 const Home = lazy(() => import("./page/Home"));
@@ -37,6 +39,13 @@ const InteriorResidential = lazy(() => import('./InteriorResidential'));
 const HomeRenovation = lazy(() => import('./HomeRenovation'));
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (ms)
+      offset: 100,    // kitna scroll hone ke baad trigger hoga
+      once: true,     // sirf ek baar chale
+    });
+  }, []);
 
   return (
     <BrowserRouter>
@@ -70,9 +79,11 @@ function App() {
           <Route path='/interior-remodeling' element={<Interior_Remodeling />} />
 
 
-          <Route path='/contact-us' element={<ContactUs />} /> 
-          <Route path='/privacy-policy' element={<PrivacyPolicy />} /> 
+          <Route path='/contact-us' element={<ContactUs />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/gallery' element={<Gallery />} />
+          <Route path='/thank-you' element={<ThankYoupage />} />
+
         </Routes>
       </Suspense>
     </BrowserRouter>

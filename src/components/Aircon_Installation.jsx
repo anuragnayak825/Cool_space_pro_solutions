@@ -26,7 +26,7 @@ export default function Aircon_Installation() {
       >
         <div className="w-full h-full bg-[#152042c5] flex flex-col space-y-4 justify-center px-6 md:px-20">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white">
-            Aircon Aircon Installation
+            Aircon Installation
           </h1>
           <div className="flex items-center gap-3 text-white text-sm sm:text-lg">
             Home <FaRightLong className="text-sm sm:text-base" /> Aircon Aircon Installation

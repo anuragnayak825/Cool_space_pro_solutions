@@ -14,6 +14,7 @@ import heroImage2 from './assets/hero_img_2.webp';
 import heroImage3 from './assets/hero_img_3.webp';
 import { FaArrowRightLong } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import HeroForm from "./page/HeroForm";
 
 const images = [heroImage, heroImage2, heroImage3];
 
@@ -110,127 +111,7 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Animated Contact Form */}
-        <motion.form
-          className="w-full max-w-md mx-auto border border-gray-300 bg-white px-4 py-6 sm:px-6 md:px-8 rounded-2xl shadow-xl space-y-3"
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-        >
-          <h1 className="text-center text-2xl font-bold text-gray-800">Get a Quotation Now</h1>
-
-          {[
-            { id: "name", type: "text", label: "Your Name" },
-            { id: "email", type: "email", label: "Email Address" },
-          ].map(({ id, type, label }) => (
-            <div className="relative w-full" key={id}>
-              <input
-                type={type}
-                id={id}
-                required
-                placeholder={label}
-                className="peer h-12 w-full border-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-md px-4 shadow-sm"
-              />
-              <label
-                htmlFor={id}
-                className="absolute left-4 -top-2 bg-white px-1 text-gray-600 text-sm transition-all
-                  peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
-                  peer-focus:-top-2 peer-focus:text-sm peer-focus:text-blue-600"
-              >
-                {label}
-              </label>
-            </div>
-          ))}
-          <label></label>
-          <div
-            className="w-full h-12 relative flex shadow-sm rounded-md"
-            ref={dropdownRef}
-          >
-            {/* Flag + Dropdown toggle */}
-            <div className="w-16 h-12 border-2 border-gray-300 border-e-0 rounded-s-md flex justify-center items-center bg-gray-100 ">
-              <img
-                src="https://flagcdn.com/w40/my.png"
-                alt="Malaysia Flag"
-                className="w-6 h-4"
-              />
-              <IoMdArrowDropdown
-                onClick={() => setIsShow(!isShow)}
-                className={`cursor-pointer transition-transform ${isShow ? 'rotate-180' : ''}`}
-              />
-            </div>
-
-            {/* Dropdown */}
-            {isShow && (
-              <div className="w-60 absolute top-14 z-10 left-0 border border-gray-300 bg-white shadow rounded-md">
-                <div className="bg-gray-100  w-full h-12 flex justify-between items-center rounded-md">
-                  <div className="flex items-center px-2 space-x-3 ">
-                    <img
-                      src="https://flagcdn.com/w40/my.png"
-                      alt="Malaysia Flag"
-                      className="w-6 h-4"
-                    />
-                    <span className="text-gray-600 font-semibold">Malaysia</span>
-                    <span className="text-gray-600 font-semibold">+60</span>
-                  </div>
-                  <div className="w-5 h-12 flex bg-white flex-col justify-between items-center rounded-e-md">
-                    <IoMdArrowDropdown className="rotate-180" />
-                    <IoMdArrowDropdown />
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Phone input */}
-            <div className="w-full">
-              <input
-                type="tel"
-                value={phone}
-                onChange={handlePhoneChange}
-                 onClick={handleClearInput}
-                placeholder="012-345 6789"
-                className=" h-12 w-full border-2 border-gray-300 text-gray-900 focus:outline-none focus:border-blue-600 rounded-e-md px-4"
-              />
-            </div>
-          </div>
-          {/* Message */}
-          <div className="relative w-full">
-            <select
-              placeholder="Your Message"
-              className="peer h-12 w-full border-2 text-gray-400 focus:text-gray-950 border-gray-300 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-md px-4 shadow-sm"
-            >
-              <option value="">Select service</option>
-              <option value="Aicon Service">Aircon service</option>
-              <option value="Interior design">Interior design</option>
-              <option value="Home Renovation">Home Renovation</option>
-            </select>
-          </div>
-          <div className="relative w-full">
-            <textarea
-              id="message"
-              required
-              rows="4"
-              placeholder="Your Message"
-              className="peer shadow-sm w-full border-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-md px-4 pt-3 resize-none"
-            ></textarea>
-            <label
-              htmlFor="message"
-              className="absolute left-4 top-1 bg-white px-1 text-gray-600 text-sm transition-all
-                peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400
-                peer-focus:top-1 peer-focus:text-sm peer-focus:text-blue-600"
-            >
-              Your Message
-            </label>
-          </div>
-
-          <div className="text-center">
-            <button
-              type="submit"
-              className="w-full px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition"
-            >
-              Submit
-            </button>
-          </div>
-        </motion.form>
+       <HeroForm/>
       </div>
 
       {/* Custom Swiper Arrows */}

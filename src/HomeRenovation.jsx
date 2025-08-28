@@ -13,6 +13,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
 import GradientCTABanner from './CTADiscountSection';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from './Auth/Authprovider';
+import HOMERENO_CONtact from './page/HOMERENO_CONtact';
 
 
 const baner = 'https://img.freepik.com/free-photo/full-shot-people-carrying-placard-together_23-2149328067.jpg?ga=GA1.1.2112137625.1747906340&semt=ais_hybrid&w=740&q=80'
@@ -190,7 +191,7 @@ export default function HomeRenovation() {
                 <FaEnvelope className="text-blue-600 text-xl" />
                 <div>
                   <p className="font-bold text-gray-900">Mail Address:</p>
-                  <p className="text-gray-700">info@goclean.com</p>
+                  <p className="text-gray-700">coolspaceprosolution@gmail.com</p>
                 </div>
               </div>
               {/* <div className="flex items-center gap-4">
@@ -205,47 +206,7 @@ export default function HomeRenovation() {
           </div>
 
           {/* Contact Form */}
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="First Name*"
-                className="w-full p-3 border border-gray-300  shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
-                required
-              />
-              <input
-                type="text"
-                placeholder="Last Name*"
-                className="w-full p-3 border border-gray-300  shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
-                required
-              />
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input
-                type="email"
-                placeholder="Email Address*"
-                className="w-full p-3 border border-gray-300  shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
-                required
-              />
-              <input
-                type="tel"
-                placeholder="Phone Number*"
-                className="w-full p-3 border border-gray-300  shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
-                required
-              />
-            </div>
-            <textarea
-              placeholder="Message..."
-              rows="5"
-              className="w-full p-3 border border-gray-300  shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full bg-blue-400 hover:bg-blue-500 text-white font-semibold py-3 rounded-md transition-all"
-            >
-              Send Us
-            </button>
-          </form>
+        <HOMERENO_CONtact/>
         </div>
       </section>
 

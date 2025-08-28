@@ -13,6 +13,7 @@ import icon4 from './assets/vacuum-cleaner.png';
 import icon5 from './assets/air-conditioner.png';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from './Auth/Authprovider';
+import RSFRrom from './page/RSFRrom';
 
 const services = [
     {
@@ -320,27 +321,7 @@ export default function AirconserviceResidential() {
                     <img src="https://bdevs.net/wp/airvice/wp-content/uploads/2021/08/contact-img-2.jpg" alt="" className='w-full h-full object-cover' />
                 </div>
 
-                <div className='w-full lg:w-1/2 h-full px-6 sm:px-8 md:px-10 py-12'>
-                    <div className='flex space-x-2 justify-start items-center text-base md:text-lg font-semibold tracking-wider text-[#00C4CC] italic mb-4'>
-                        <h1 className='uppercase'>Get in Touch</h1>
-                        <hr className='w-8 border border-[#00C4CC]' />
-                    </div>
-
-                    <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-gray-800 leading-tight'>
-                        Have any question or free consultacy?
-                    </h1>
-
-                    <form className='w-full mt-8 space-y-4'>
-                        <input type="text" placeholder='Enter Your Name' className='px-5 py-4 md:py-5 border italic tracking-wider placeholder:tracking-wider placeholder:font-bold border-gray-400 outline-0 w-full rounded-full text-base' />
-                        <input type="text" placeholder='Enter Your Email' className='px-5 py-4 md:py-5 border italic tracking-wider placeholder:tracking-wider placeholder:font-bold border-gray-400 outline-0 w-full rounded-full text-base' />
-                        <textarea placeholder='Enter Your Message' className='px-5 py-4 h-32 md:h-40 border italic tracking-wider placeholder:tracking-wider placeholder:font-bold border-gray-400 outline-0 w-full rounded-3xl text-base resize-none'></textarea>
-                        <div className='w-full'>
-                            <button className='px-8 py-4 md:px-10 md:py-5 font-medium cursor-pointer hover:bg-[#00C4CC] hover:font-semibold hover:text-white rounded-full border border-[#00C4CC] uppercase italic text-sm md:text-base'>
-                                Get Estimated
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                <RSFRrom/>
             </div>
         </Layout>
     );

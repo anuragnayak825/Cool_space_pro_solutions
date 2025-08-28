@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ServicenameAndDesign from './ServicenameAndDesign'
 import { FaRightLong } from 'react-icons/fa6'
 import Layout from './Layout/Layout'
@@ -11,6 +11,9 @@ const categories = ['Aircon Service', 'Interior Design', 'Home Renovation']
 
 
 export default function Gallery() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const [activeCategory, setActiveCategory] = useState('Aircon Service')
 
     return (
@@ -46,7 +49,7 @@ export default function Gallery() {
             {/* Extra Decorative Section */}
             {
                 activeCategory == 'Aircon Service' ? <ServicenameAndDesign />
-                    : activeCategory == 'Interior Design' ? <ServicenameInteriordesign/> : <Servicenamehomerenovation/>
+                    : activeCategory == 'Interior Design' ? <ServicenameInteriordesign /> : <Servicenamehomerenovation />
             }
 
             {/* CTA */}

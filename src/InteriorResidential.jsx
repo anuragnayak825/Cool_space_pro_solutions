@@ -4,6 +4,7 @@ import { FaRightLong } from 'react-icons/fa6'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import video from './assets/2474849_Furniture_Modern_1920x1080.mp4'
 import GradientCTABanner from './CTADiscountSection'
+import ContactForm from './page/ContactForm'
 
 const Service = [
     {
@@ -52,6 +53,7 @@ export default function InteriorResidential() {
     const { scrollYProgress } = useScroll();
     const lineWidth = useTransform(scrollYProgress, [0, 1], ['100%', '5%']);
     const lineHeight = useTransform(scrollYProgress, [0, 1], ['100%', '.5%']);
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -130,6 +132,8 @@ export default function InteriorResidential() {
                         Service.map((item, i) => (
                             <div className='flex flex-col'>
                                 <div
+                                    data-aos="fade-up"
+                                    data-aos-duration="3000"
                                     key={i}
                                     className="relative group rounded-md bg overflow-hidden shadow-md min-h-[450px] sm:min-h-[500px] lg:min-h-[600px]"
                                 >
@@ -153,43 +157,9 @@ export default function InteriorResidential() {
 
             {/* Contact Section */}
             <div className="w-full flex bg-gray-50 flex-col lg:flex-row items-center overflow-hidden justify-between gap-10 relative px-4 sm:px-8 md:px-12 lg:px-20 py-20">
-                {/* Form Side */}
-                <motion.div
-                    variants={contentVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false, amount: 0.4 }} // 0.4 = start animating when 40% visible
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    className="w-full lg:w-1/2 space-y-6 z-10">
-                    <div className="flex space-x-2 items-center text-base md:text-lg font-semibold text-[#00C4CC] italic">
-                        <h1 className="uppercase">Get in Touch</h1>
-                        <hr className="w-8 border border-[#00C4CC]" />
-                    </div>
 
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-800 leading-tight">
-                        Have any question or free consultancy?
-                    </h1>
-
-                    <form className="space-y-4">
-                        <input
-                            type="text"
-                            placeholder="Enter Your Name"
-                            className="px-5 py-4 border italic tracking-wider placeholder:font-bold border-gray-400 outline-0 w-full rounded-full text-base"
-                        />
-                        <input
-                            type="text"
-                            placeholder="Enter Your Email"
-                            className="px-5 py-4 border italic tracking-wider placeholder:font-bold border-gray-400 outline-0 w-full rounded-full text-base"
-                        />
-                        <textarea
-                            placeholder="Enter Your Message"
-                            className="px-5 py-4 h-32 md:h-40 border italic tracking-wider placeholder:font-bold border-gray-400 outline-0 w-full rounded-3xl text-base resize-none"
-                        ></textarea>
-                        <button className="px-8 py-4 md:px-10 md:py-5 font-medium hover:bg-[#00C4CC] hover:text-white rounded-full border border-[#00C4CC] uppercase italic text-sm md:text-base">
-                            Get Estimated
-                        </button>
-                    </form>
-                </motion.div>
+                {/* ✅ Contact Form from new Component */}
+                <ContactForm contentVariants={contentVariants} />
 
                 {/* Image Side */}
                 <div className="relative w-full lg:w-1/2 flex justify-center items-center">
@@ -201,12 +171,12 @@ export default function InteriorResidential() {
                     />
                     <style>
                         {`
-              @keyframes oscillateX {
-                0% { transform: translateX(0); }
-                50% { transform: translateX(-25px); }
-                100% { transform: translateX(0); }
-              }
-            `}
+                        @keyframes oscillateX {
+                            0% { transform: translateX(0); }
+                            50% { transform: translateX(-25px); }
+                            100% { transform: translateX(0); }
+                        }
+                        `}
                     </style>
                 </div>
 
@@ -222,6 +192,7 @@ export default function InteriorResidential() {
                     className="hidden sm:block absolute bottom-0 left-0 transform -scale-x-100 "
                 />
             </div>
+
             <GradientCTABanner />
         </Layout>
     );

@@ -210,5 +210,8 @@
     margin-top: 20px !important;
     position: relative !important;
 }
+button{
+  cursor: pointer;
+}
 
 
