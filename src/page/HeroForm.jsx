@@ -2,8 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IoMdArrowDropdown } from "react-icons/io";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroForm() {
+    const navigate = useNavigate()
     const [isShow, setIsShow] = useState(false);
     const [phone, setPhone] = useState("");
     const [formData, setFormData] = useState({
@@ -57,7 +59,6 @@ export default function HeroForm() {
             setError("Please fill in all fields.");
             return;
         }
-
         setLoading(true);
 
         try {
@@ -69,7 +70,6 @@ export default function HeroForm() {
             data.append("message", formData.message);
 
             const res = await axios.post("quotation.php", data,);
-
             console.log("Response:", res.data);
 
             if (res.data.success) {
