@@ -164,49 +164,52 @@ export default function HomeRenovation() {
 
 
 
-      <section className="bg-white text-gray-800 px-4 py-12 md:px-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-white text-gray-800 px-4 py-12 md:px-16 lg:px-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <p className="text-blue-600 font-semibold mb-2 flex items-center gap-2">
+            <p className="text-blue-600 font-semibold mb-3 flex items-center gap-2">
               <span className="text-xl">✨</span> Contact Us
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight mb-4">
-              Feel Free To Contact<br />
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 leading-tight mb-4">
+              Feel Free To Contact <br className="hidden sm:block" />
               For Any Kind Of Query.
             </h2>
-            <p className="text-gray-600 mb-8">
-              Thank you for choosing Cool Space Pro Solutions. We believe communication is key to delivering exceptional service.
+
+            <p className="text-gray-600 mb-8 text-base sm:text-lg">
+              Thank you for choosing Cool Space Pro Solutions. We believe
+              communication is key to delivering exceptional service.
             </p>
 
-            <div className=" text-sm flex space-x-9 items-center ">
-              <div className="flex items-center gap-4 ">
-                <FaPhoneAlt className="text-blue-600 text-xl" />
+            {/* Contact Info */}
+            <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:space-x-10">
+              {/* Phone */}
+              <div className="flex items-center gap-4">
+                <FaPhoneAlt className="text-blue-600 text-xl shrink-0" />
                 <div>
                   <p className="font-bold text-gray-900">Phone Number:</p>
                   <p className="text-gray-700">+60 11-2441 9414</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4 ">
-                <FaEnvelope className="text-blue-600 text-xl" />
+
+              {/* Email */}
+              <div className="flex items-center gap-4">
+                <FaEnvelope className="text-blue-600 text-xl shrink-0" />
                 <div>
                   <p className="font-bold text-gray-900">Mail Address:</p>
-                  <p className="text-gray-700">coolspaceprosolution@gmail.com</p>
+                  <p className="text-gray-700">
+                    coolspaceprosolution@gmail.com
+                  </p>
                 </div>
               </div>
-              {/* <div className="flex items-center gap-4">
-                <FaMapMarkerAlt className="text-blue-600 text-xl" />
-                <div>
-                  <p className="font-bold text-gray-900">Office Address:</p>
-                  <p className="text-gray-700">122 Albert St, MB, AU</p>
-                </div>
-              </div> */}
-
             </div>
           </div>
 
           {/* Contact Form */}
-        <HOMERENO_CONtact/>
+          <div className="w-full">
+            <HOMERENO_CONtact />
+          </div>
         </div>
       </section>
 
