@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Layout from './Layout/Layout'
-import { FaRightLong } from 'react-icons/fa6'
+import { FaArrowRightLong, FaRightLong } from 'react-icons/fa6'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import video from './assets/2474849_Furniture_Modern_1920x1080.mp4'
 import GradientCTABanner from './CTADiscountSection'
@@ -146,8 +146,15 @@ export default function InteriorResidential() {
                                 </div>
 
                                 <div className="w-full py-5 space-y-2.5">
-                                    <h1 className="font-bold text-xl sm:text-2xl md:text-3xl text-center font-serif">{item?.title}</h1>
+                                    <h1 className="font-bold text-xl sm:text-2xl md:text-[27px] text-center font-serif">{item?.title}</h1>
                                     <p className="text-sm sm:text-base md:text-lg font-medium text-center font-serif text-gray-600">{item?.des}</p>
+
+                                    <div className='w-full h-auto flex justify-center items-center'>
+                                        <button onClick={() => window.open('tel:+601124419414')} className='w-auto px-5 text-white font-semibold text-lg rounded-md py-3 bg-blue-600 flex justify-center items-center gap-2 group '>
+                                            Let’s Talk in Detail
+                                            <FaArrowRightLong className=' group-hover:translate-x-2 transform transition-transform duration-300' />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         ))

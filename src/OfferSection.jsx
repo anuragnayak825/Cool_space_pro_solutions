@@ -12,10 +12,10 @@ export default function OfferSection() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight text-center">
                     Bringing Luxury & Functionality Into Every Corner
                 </h1>
+
                 <p className="text-lg md:text-xl text-center lg:text-2xl mt-6 text-gray-700 leading-relaxed tracking-wide">
                     From top-tier air conditioning to luxurious renovations — we bring expertise, elegance, and efficiency to every project. No hidden costs, just real transformation.
                 </p>
-
                 <button   onClick={() => window.open('https://wa.me/+601124419414', '_blank')} className="mt-8 animate-bounce cursor-pointer text-lg w-max px-6 py-3 mx-auto bg-green-600 text-white font-semibold rounded-lg flex items-center gap-2 hover:bg-green-700 transition-all duration-300">
                     <FaWhatsapp className='text-2xl font-bold'/> Chat on WhatsApp
                 </button>

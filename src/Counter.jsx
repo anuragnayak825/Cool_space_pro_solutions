@@ -7,27 +7,33 @@ import {
   FaHome,
   FaHandshake,
 } from "react-icons/fa";
-import { FaUsersViewfinder } from "react-icons/fa6";
+import { FaGears, FaUsersViewfinder } from "react-icons/fa6";
 
 const stats = [
   {
-    icon: <FaSnowflake className="text-[120px] text-gray-200 absolute opacity-10" />,
+    icon: <FaSnowflake className="text-[120px] text-gray-200 absolute opacity-60" />,
     icon2: <FaHome size={28} className="text-white" />,
-    number: 25,
+    number: 22,
     label: "Years Experience",
   },
   {
-    icon: <FaWrench className="text-[120px] text-gray-200 absolute opacity-10" />,
+    icon: <FaWrench className="text-[120px] text-gray-200 absolute opacity-60" />,
     icon2: <FaUsersViewfinder size={28} className="text-white" />,
-    number: 4760,
+    number: 99,
     label: "Happy Clients",
   },
   {
-    icon: <FaSmile className="text-[120px] text-gray-200 absolute opacity-10" />,
-    icon2: <FaHandshake size={28} className="text-white" />,
-    number: 9032,
-    label: "Handled Cases",
+    icon: <FaGears className="text-[120px] text-gray-200 absolute opacity-60" />,
+    icon2: <FaGears size={28} className="text-white" />,
+    number: 3000,
+    label: "Installations",
   },
+  {
+    icon: <FaSmile className="text-[120px] text-gray-200 absolute opacity-60" />,
+    icon2: <FaHandshake size={28} className="text-white" />,
+    number: 27895,
+    label: "Handled Cases",
+  }
 ];
 
 const Counter = ({ number }) => {
@@ -60,9 +66,9 @@ const Counter = ({ number }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="text-4xl md:text-4xl font-extrabold text-cyan-600 relative z-10"
+      className="text-4xl md:text-4xl font-extrabold text-cyan-600 relative z-20"
     >
-      {count}+
+      {count}{number == 99 ? '%' : '+'}
     </motion.span>
   );
 };
@@ -73,7 +79,7 @@ export default function CounterSection() {
       <h2 className="text-3xl md:text-4xl italic tracking-wide font-semibold mb-12">
         Numbers Speak
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
         {stats.map((item, index) => (
           <div
             key={index}
@@ -87,7 +93,7 @@ export default function CounterSection() {
             <div className="relative w-full  h-[80px] flex flex-col mt-8 items-center justify-center">
               {item.icon}
               <Counter number={item.number} />
-              <p className="text-base  md:text-lg text-gray-900 font-semibold italic tracking-wider max-w-[250px] mx-auto">
+              <p className="text-base  md:text-lg text-gray-900 font-semibold italic tracking-wider max-w-[250px] mx-auto z-10">
                 {item.label}
               </p>
             </div>

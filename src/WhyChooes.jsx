@@ -21,9 +21,9 @@ export default function WhyChooes() {
                 <hr className=' border-[2px] max-w-40 w-full mt-2 border-[#00C4CC]' />
             </div>
 
-            <div className="w-full py-10 px-4 md:px-10 lg:px-20 flex flex-col lg:flex-row gap-8 items-center">
+            <div className="w-full py-10 px-4 md:px-10 lg:px-20 flex flex-col xl:flex-row gap-8 items-center">
                 {/* Left Image */}
-                <div className="w-full lg:w-1/2">
+                <div className="w-full xl:w-1/2">
                     <img
                         src="https://pixydrops.com/loazzne/assets/images/why_choose_us.jpg"
                         alt="Why Choose Us"
@@ -32,11 +32,11 @@ export default function WhyChooes() {
                 </div>
 
                 {/* Right Text Content */}
-                <div className="w-full lg:w-1/2 flex flex-col justify-between space-y-6">
+                <div className="w-full xl:w-1/2 flex flex-col justify-between space-y-6">
                     {/* Headings */}
                     <div className="space-y-3">
-                        <h2 className="text-2xl sm:text-3xl font-bold leading-snug tracking-wide text-gray-900">
-                            We are trusted source of ac and<br />
+                        <h2 className="text-xl md:text-3xl lg:text-2xl xl:text-left text-center xl:text-3xl font-bold leading-snug tracking-wide text-gray-900">
+                            We are trusted source of ac and<br className='hidden xl:block' />
                             heating maintenance repairs company
                         </h2>
                     </div>

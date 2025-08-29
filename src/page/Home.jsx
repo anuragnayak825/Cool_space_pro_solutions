@@ -13,6 +13,7 @@ import FAQSection from '../FAQSection';
 import CounterSection from '../Counter';
 import KualaLumpurAreas from '../KualaLumpurAreas';
 import CTADiscountSection from '../CTADiscountSection';
+import SelangorAreas from './SelangorAreas';
 
 export default function Home() {
     useEffect(() => {
@@ -27,7 +28,8 @@ export default function Home() {
             <WhyChooes />
             <CounterSection />
             <FAQSection />
-            <ClientReviewSlider />
+            {/* <ClientReviewSlider /> */}
+            <SelangorAreas/>
             <KualaLumpurAreas />
             <CTADiscountSection />
             {/* <ContactFrom2/> */}

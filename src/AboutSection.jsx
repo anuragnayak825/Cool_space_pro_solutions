@@ -20,7 +20,7 @@ export default function AboutSection() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.7, ease: 'easeOut' }}
-                className='w-full max-w-3xl flex justify-center items-center'
+                className='w-full max-w-3xl flex justify-center items-center '
             >
                 <div className='w-full relative max-w-[460px] h-[75vh] sm:h-[70vh] md:h-[60vh] lg:h-[75vh]'>
                     <img
@@ -46,7 +46,7 @@ export default function AboutSection() {
                     <div className='w-32 sm:w-36 md:w-40 flex justify-center items-center space-x-4 bg-white absolute shadow-md top-4 sm:top-6 md:top-8 left-6 sm:-left-8 md:-left-10 border-s-[3px] border-s-[#00C4CC] border-white z-10 h-[8vh] sm:h-[9vh] md:h-[10vh] rounded-md'>
                         <GrServices className='text-2xl sm:text-3xl md:text-4xl text-[#00C4CC]' />
                         <div className='flex flex-col items-start'>
-                            <h1 className='font-bold text-gray-800 text-sm sm:text-base md:text-xl'>5544 +</h1>
+                            <h1 className='font-bold text-gray-800 text-sm sm:text-base md:text-xl'>23,710+</h1>
                             <span className='text-[10px] sm:text-xs font-semibold text-gray-300'>Satisfied Clients</span>
                         </div>
                     </div>
@@ -58,7 +58,7 @@ export default function AboutSection() {
                 initial={{ opacity: 0, x: 50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-                className='w-full max-w-3xl flex justify-start items-center'
+                className='w-full max-w-3xl flex justify-start items-center '
             >
                 <div className='w-full space-y-6 relative px-2 sm:px-6 md:px-10'>
                     <div className='hidden max-w-[250px] relative border-[3px] lg:flex justify-center items-center border-[#00C4CC] px-3.5 py-3'>

@@ -59,6 +59,7 @@ export default function HeroForm() {
             setError("Please fill in all fields.");
             return;
         }
+
         setLoading(true);
 
         try {
@@ -213,7 +214,7 @@ export default function HeroForm() {
                     required
                     rows="4"
                     placeholder="Your Message"
-                    className="peer shadow-sm w-full border-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-md px-4 pt-3 resize-none"
+                    className="peer shadow-sm w-full border-2 border-gray-300 text-gray-900 placeholder-transparent focus:outline-none focus:border-blue-600 rounded-md px-4 pt-5 resize-none"
                 ></textarea>
                 <label
                     htmlFor="message"
