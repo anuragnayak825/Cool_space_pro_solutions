@@ -13,10 +13,35 @@ export default function RSFRrom() {
   const [error, setError] = useState(""); // 🔴 Error message
   const [success, setSuccess] = useState(""); // 🟢 Success message
 
-  // handle input change
+  // validate phone (format: 012-123 1234)
+  const isValidPhone = (phone) => {
+    const phoneRegex = /^0\d{2}-\d{3}\s\d{4}$/; // ✅ like 012-123 1234
+    return phoneRegex.test(phone);
+  };
+
+  // handle input change with auto phone formatting
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setError(""); // typing start hote hi error remove
+    let { name, value } = e.target;
+
+    if (name === "phone") {
+      // remove non-digits
+      value = value.replace(/\D/g, "");
+
+      // limit max 10 digits (0xx xxx xxxx)
+      if (value.length > 10) {
+        value = value.slice(0, 10);
+      }
+
+      // formatting rules
+      if (value.length > 3 && value.length <= 6) {
+        value = value.replace(/(\d{3})(\d+)/, "$1-$2");
+      } else if (value.length > 6) {
+        value = value.replace(/(\d{3})(\d{3})(\d+)/, "$1-$2 $3");
+      }
+    }
+
+    setFormData({ ...formData, [name]: value });
+    setError(""); // clear error when typing
   };
 
   // handle form submit
@@ -28,6 +53,11 @@ export default function RSFRrom() {
     // validate inputs
     if (!formData.name.trim() || !formData.phone.trim() || !formData.message.trim()) {
       setError("⚠️ Please fill in all fields.");
+      return;
+    }
+
+    if (!isValidPhone(formData.phone)) {
+      setError("⚠️ Phone format must be like 012-123 1234");
       return;
     }
 
@@ -45,7 +75,7 @@ export default function RSFRrom() {
       if (res.data.success) {
         setSuccess("✅ Message sent successfully!");
         setLoading(false);
-        setFormData({ name: "", phone: "", message: "" }); // form reset
+        setFormData({ name: "", phone: "", message: "" }); // reset form
         navigate("/thank-you"); // ✅ redirect
       } else {
         setError("❌ Error sending message. Please try again.");
@@ -85,16 +115,20 @@ export default function RSFRrom() {
             error && !formData.name ? "border-red-500" : "border-gray-400"
           } italic tracking-wider placeholder:tracking-wider placeholder:font-bold outline-0 w-full rounded-full text-base`}
         />
+
         <input
           type="tel"
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="Enter Your Number"
+          placeholder="012-123 1234"
           className={`px-5 py-4 md:py-5 border ${
-            error && !formData.phone ? "border-red-500" : "border-gray-400"
+            (error && !formData.phone) || (error && !isValidPhone(formData.phone))
+              ? "border-red-500"
+              : "border-gray-400"
           } italic tracking-wider placeholder:tracking-wider placeholder:font-bold outline-0 w-full rounded-full text-base`}
         />
+
         <textarea
           name="message"
           value={formData.message}

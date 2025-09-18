@@ -18,6 +18,7 @@ import PrivacyPolicy from './PrivacyPolicy';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ThankYoupage from './page/ThankYoupage';
+import PagenotFound from './page/PagenotFound';
 
 
 const Home = lazy(() => import("./page/Home"));
@@ -83,6 +84,7 @@ function App() {
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path='/thank-you' element={<ThankYoupage />} />
+          <Route path='/*' element={<PagenotFound />} />
 
         </Routes>
       </Suspense>

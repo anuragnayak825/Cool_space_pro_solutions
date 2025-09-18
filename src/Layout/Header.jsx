@@ -272,7 +272,7 @@ export default function Header() {
                         </NavLink>
                         <button
                           onClick={() => toggleSubmenu(item.name)}
-                          className="text-[#1574C0] hover:text-[#00C4CC] transition transform focus:outline-none"
+                          className="text-[#1574C0] hover:text-[#00C4CC] transition transform focus:outline-none shadow-md p-1 flex justify-center items-center rounded-full bg-blue-500 text-white"
                         >
                           <IoIosArrowDown
                             className={`transition-transform duration-300 ${expandedService === item.name ? 'rotate-180' : ''}`}

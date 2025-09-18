@@ -17,10 +17,41 @@ export default function HOMERENO_Contact() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  // Format phone number like 012-123 1234
+  const formatPhone = (value) => {
+    // remove non-digits
+    let digits = value.replace(/\D/g, "");
+
+    // max 10 digits
+    if (digits.length > 10) digits = digits.slice(0, 10);
+
+    // format: 3-3-4
+    if (digits.length <= 3) {
+      return digits;
+    } else if (digits.length <= 6) {
+      return digits.slice(0, 3) + "-" + digits.slice(3);
+    } else {
+      return (
+        digits.slice(0, 3) +
+        "-" +
+        digits.slice(3, 6) +
+        " " +
+        digits.slice(6)
+      );
+    }
+  };
+
   // handle input change
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setError(""); // typing karte hi error reset
+    const { name, value } = e.target;
+
+    if (name === "phone") {
+      setFormData({ ...formData, phone: formatPhone(value) });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+
+    setError("");
   };
 
   // handle submit
@@ -29,7 +60,6 @@ export default function HOMERENO_Contact() {
     setError("");
     setSuccess("");
 
-    // validation
     if (
       !formData.firstName.trim() ||
       !formData.lastName.trim() ||
@@ -44,8 +74,7 @@ export default function HOMERENO_Contact() {
     setLoading(true);
     try {
       const data = new FormData();
-      data.append("firstName", formData.firstName);
-      data.append("lastName", formData.lastName);
+      data.append("name", formData.firstName + " " + formData.lastName);
       data.append("email", formData.email);
       data.append("phone", formData.phone);
       data.append("message", formData.message);
@@ -62,7 +91,7 @@ export default function HOMERENO_Contact() {
           message: "",
         });
         setLoading(false);
-        navigate("/thank-you"); // ✅ Redirect
+        navigate("/thank-you");
       } else {
         setError("❌ Error sending message. Please try again.");
         setLoading(false);
@@ -76,9 +105,7 @@ export default function HOMERENO_Contact() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      {/* 🔴 Error msg */}
       {error && <p className="text-red-500 font-medium">{error}</p>}
-      {/* 🟢 Success msg */}
       {success && <p className="text-green-600 font-medium">{success}</p>}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -88,9 +115,7 @@ export default function HOMERENO_Contact() {
           value={formData.firstName}
           onChange={handleChange}
           placeholder="First Name*"
-          className={`w-full p-3 border ${
-            error && !formData.firstName ? "border-red-500" : "border-gray-300"
-          } shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700`}
+          className="w-full p-3 border border-gray-300 shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
           required
         />
         <input
@@ -99,9 +124,7 @@ export default function HOMERENO_Contact() {
           value={formData.lastName}
           onChange={handleChange}
           placeholder="Last Name*"
-          className={`w-full p-3 border ${
-            error && !formData.lastName ? "border-red-500" : "border-gray-300"
-          } shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700`}
+          className="w-full p-3 border border-gray-300 shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
           required
         />
       </div>
@@ -113,9 +136,7 @@ export default function HOMERENO_Contact() {
           value={formData.email}
           onChange={handleChange}
           placeholder="Email Address*"
-          className={`w-full p-3 border ${
-            error && !formData.email ? "border-red-500" : "border-gray-300"
-          } shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700`}
+          className="w-full p-3 border border-gray-300 shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
           required
         />
         <input
@@ -123,10 +144,8 @@ export default function HOMERENO_Contact() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="Phone Number*"
-          className={`w-full p-3 border ${
-            error && !formData.phone ? "border-red-500" : "border-gray-300"
-          } shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700`}
+          placeholder="012-345 6789"
+          className="w-full p-3 border border-gray-300 shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
           required
         />
       </div>
@@ -137,9 +156,7 @@ export default function HOMERENO_Contact() {
         onChange={handleChange}
         placeholder="Message..."
         rows="5"
-        className={`w-full p-3 border ${
-          error && !formData.message ? "border-red-500" : "border-gray-300"
-        } shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700`}
+        className="w-full p-3 border border-gray-300 shadow-inner rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-700"
         required
       ></textarea>
 
